@@ -1,0 +1,29 @@
+{
+    "className": "List",
+    "testMethods": [
+        {
+            "methodName": "testIsEmptyTrue",
+            "code": "@Test\nvoid testIsEmptyTrue(){\n assertEquals(true, new List().isEmpty());\n}\n"
+        },
+        {
+            "methodName": "testAddFirst",
+            "code": "@Test\nvoid testAddFirst(){\n List list = new List();\n list.addFirst(1);\n assertEquals(1, list.getFirst());\n}\n"
+        },
+        {
+            "methodName": "testGetFirst",
+            "code": "@Test\nvoid testGetFirst() throws ListEmptyException{\n List list = new List();\n list.addLast(2);\n assertEquals(2, list.getFirst());\n}\n"
+        },
+        {
+            "methodName": "testRemoveFirst",
+            "code": "@Test\nvoid testRemoveFirst() throws ListEmptyException{\n List list = new List();\n list.addLast(3);\n assertEquals(3, list.removeFirst());\n}\n"
+        },
+        {
+            "methodName": "testAddLast",
+            "code": "@Test\nvoid testAddLast(){\n List list = new List();\n list.addLast(4);\n assertEquals(4, (int)list.getLast());\n}\n"
+        },
+        {
+            "methodName": "testRemoveLast",
+            "code": "@Test\nvoid testRemoveLast() throws ListEmptyException{\n List list = new List();\n list.addLast(5);\n assertEquals(5, list.removeLast());\n}\n"
+        }
+    ]
+}

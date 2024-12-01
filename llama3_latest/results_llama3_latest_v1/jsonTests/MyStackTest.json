@@ -1,0 +1,21 @@
+{
+    "className": "MyStack",
+    "testMethods": [
+        {
+            "methodName": "testEmptyStack",
+            "code": "@Test \nvoid testEmptyStack(){\n    MyStack stack = new MyStack();\n    assertTrue(stack.isEmpty());\n}\n"
+        },
+        {
+            "methodName": "testPushAndPop",
+            "code": "@Test \nvoid testPushAndPop() throws ListEmptyException {\n    MyStack stack = new MyStack();\n    Object obj1 = 1;\n    Object obj2 = 2;\n    stack.push(obj1);\n    stack.push(obj2);\n    assertEquals(obj2, stack.pop());\n    assertEquals(obj1, stack.pop());\n}\n"
+        },
+        {
+            "methodName": "testPopFromEmptyStack",
+            "code": "@Test \nvoid testPopFromEmptyStack() throws ListEmptyException {\n    MyStack stack = new MyStack();\n    try{\n        stack.pop();\n        fail(\"Expected ListEmptyException\");\n    } catch (ListEmptyException e) {}\n}\n"
+        },
+        {
+            "methodName": "testToString",
+            "code": "@Test \nvoid testToString(){\n    MyStack stack = new MyStack();\n    assertEquals(\"\", stack.toString());\n}\n"
+        }
+    ]
+}

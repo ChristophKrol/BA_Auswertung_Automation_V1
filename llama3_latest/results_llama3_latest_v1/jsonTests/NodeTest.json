@@ -1,0 +1,50 @@
+{
+    "className": "Node",
+    "testMethods": [
+        {
+            "methodName": "testConstructorWithThreeArguments",
+            "code": "@Test\nvoid testConstructorWithThreeArguments(){\n\tNode node = new Node(\"value\", new Node(null), new Node(null));\n\tassertNotNull(node);\n}"
+        },
+        {
+            "methodName": "testConstructorWithTwoArguments",
+            "code": "@Test\nvoid testConstructorWithTwoArguments(){\n\tNode node = new Node(\"value\");\n\tassertNotNull(node);\n}"
+        },
+        {
+            "methodName": "testConstructorWithoutArguments",
+            "code": "@Test\nvoid testConstructorWithoutArguments(){\n\tNode node = new Node();\n\tassertNull(node.value);\n}"
+        },
+        {
+            "methodName": "testGetValue",
+            "code": "@Test\nvoid testGetValue(){\n\tNode node = new Node(\"value\");\n\tassertEquals(\"value\", node.getValue());\n}"
+        },
+        {
+            "methodName": "testSetValue",
+            "code": "@Test\nvoid testSetValue(){\n\tNode node = new Node(\"oldValue\");\n\tnode.setValue(\"newValue\");\n\tassertNotEquals(\"oldValue\", node.getValue());\n}"
+        },
+        {
+            "methodName": "testGetNext",
+            "code": "@Test\nvoid testGetNext(){\n\tNode node = new Node(\"value\");\n\tassertNotNull(node.getNext());\n}"
+        },
+        {
+            "methodName": "testSetNext",
+            "code": "@Test\nvoid testSetNext(){\n\tNode node = new Node(\"value\");\n\tnode.setNext(new Node(null));\n\tassertNotNull(node.getNext());\n}"
+        },
+        {
+            "methodName": "testAddLast",
+            "code": "@Test\nvoid testAddLast(){\n\tNode node = new Node(\"value\");\n\tnode.addLast(\"newValue\");\n\tassertNotNull(node.next);"
+        },
+        {
+            "methodName": "testRemoveLast",
+            "code": "@Test\nvoid testRemoveLast(){\n\tNode node = new Node(\"value\");\n\tnode.addLast(\"newValue\");\n\tassertNotNull(node.removeLast());",
+            "node.getLastElement());\n}": {
+                "methodName": "testGetLast",
+                "code": "@Test\nvoid testGetLast(){\n\tNode node = new Node(\"value\");\n\tassertEquals(\"value\", node.getLast());\n}"
+            }
+        },
+        "\n        ],\n        {",
+        "methodName",
+        "testToString",
+        "code",
+        "@Test\nvoid testToString(){\n\tNode node = new Node(\"value\");\n\tString expected = \"[\" + node.value + \"]\";\n\tassertEquals(expected, node.toString());\n}"
+    ]
+}

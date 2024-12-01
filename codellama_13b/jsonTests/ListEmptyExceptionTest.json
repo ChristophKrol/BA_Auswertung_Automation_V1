@@ -1,0 +1,17 @@
+{
+    "className": "ListEmptyException",
+    "testMethods": [
+        {
+            "methodName": "testConstructorWithNoArguments",
+            "code": "@Test \nvoid testConstructorWithNoArguments() {\n assertEquals(\"Liste ist leer\", new ListEmptyException().getMessage());\n}"
+        },
+        {
+            "methodName": "testConstructorWithMessageArgument",
+            "code": "@Test \nvoid testConstructorWithMessageArgument() {\n assertEquals(\"Liste ist leer\", new ListEmptyException(\"Liste ist leer\").getMessage());\n}"
+        },
+        {
+            "methodName": "testConstructorWithCauseArgument",
+            "code": "@Test \nvoid testConstructorWithCauseArgument() {\n assertEquals(new RuntimeException(), new ListEmptyException(new RuntimeException()).getCause());\n}"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "className": "AVLNode",
+    "testMethods": [
+        {
+            "methodName": "testGetLeftWithNullValue",
+            "code": "@Test \\nvoid testGetLeftWithNullValue() throws Exception {\\n AVLNode<Integer> node = new AVLNode<>(null);\\n assertNull(node.getLeft());\\n}"
+        },
+        {
+            "methodName": "testSetLeftWithNonNullValue",
+            "code": "@Test \\nvoid testSetLeftWithNonNullValue() throws Exception {\\n AVLNode<Integer> node = new AVLNode<>(10);\\n AVLNode<Integer> leftChild = new AVLNode<>(5);\\n node.setLeft(leftChild);\\n assertEquals(leftChild, node.getLeft());\\n}"
+        },
+        {
+            "methodName": "testGetRightWithNullValue",
+            "code": "@Test \\nvoid testGetRightWithNullValue() throws Exception {\\n AVLNode<Integer> node = new AVLNode<>(null);\\n assertNull(node.getRight());\\n}"
+        },
+        {
+            "methodName": "testSetRightWithNonNullValue",
+            "code": "@Test \\nvoid testSetRightWithNonNullValue() throws Exception {\\n AVLNode<Integer> node = new AVLNode<>(10);\\n AVLNode<Integer> rightChild = new AVLNode<>(20);\\n node.setRight(rightChild);\\n assertEquals(rightChild, node.getRight());\\n}"
+        },
+        {
+            "methodName": "testGetBalanceWithZeroValue",
+            "code": "@Test \\nvoid testGetBalanceWithZeroValue() throws Exception {\\n AVLNode<Integer> node = new AVLNode<>(10);\\n assertEquals(0, node.getBalance());\\n}"
+        },
+        {
+            "methodName": "testSetBalanceWithNonZeroValue",
+            "code": "@Test \\nvoid testSetBalanceWithNonZeroValue() throws Exception {\\n AVLNode<Integer> node = new AVLNode<>(10);\\n int balance = 2;\\n node.setBalance(balance);\\n assertEquals(balance, node.getBalance());\\n}"
+        },
+        {
+            "methodName": "testGetHeightWithZeroValue",
+            "code": "@Test \\nvoid testGetHeightWithZeroValue() throws Exception {\\n AVLNode<Integer> node = new AVLNode<>(10);\\n assertEquals(0, node.getHeight());\\n}"
+        },
+        {
+            "methodName": "testSetHeightWithNonZeroValue",
+            "code": "@Test \\nvoid testSetHeightWithNonZeroValue() throws Exception {\\n AVLNode<Integer> node = new AVLNode<>(10);\\n int height = 2;\\n node.setHeight(height);\\n assertEquals(height, node.getHeight());\\n}"
+        },
+        {
+            "methodName": "testGetTotalNumberOfChildrenWithNullChildren",
+            "code": "@Test \\nvoid testGetTotalNumberOfChildrenWithNullChildren() throws Exception {\\n AVLNode<Integer> node = new AVLNode<>(10);\\n assertEquals(1, node.getTotalNumberOfChildren());\\n}"
+        },
+        {
+            "methodName": "testGetTotalNumberOfChildrenWithNonNullChildren",
+            "code": "@Test \\nvoid testGetTotalNumberOfChildrenWithNonNullChildren() throws Exception {\\n AVLNode<Integer> node = new AVLNode<>(10);\\n AVLNode<Integer> leftChild = new AVLNode<>(5);\\n AVLNode<Integer> rightChild = new AVLNode<>(20);\\n node.setLeft(leftChild);\\n node.setRight(rightChild);\\n assertEquals(3, node.getTotalNumberOfChildren());\\n}"
+        }
+    ]
+}

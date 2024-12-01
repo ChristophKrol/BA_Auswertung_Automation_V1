@@ -1,0 +1,33 @@
+{
+    "className": "MyStack",
+    "testMethods": [
+        {
+            "methodName": "testIsEmptyWithEmptyStack",
+            "code": "@Test \\nvoid testIsEmptyWithEmptyStack(){\\n assertTrue(new MyStack().isEmpty());\\n}"
+        },
+        {
+            "methodName": "testIsEmptyWithNonEmptyStack",
+            "code": "@Test \\nvoid testIsEmptyWithNonEmptyStack(){\\n MyStack stack = new MyStack();\\n stack.push(1);\\n assertFalse(stack.isEmpty());\\n}"
+        },
+        {
+            "methodName": "testPushWithNullValue",
+            "code": "@Test \\nvoid testPushWithNullValue(){\\n MyStack stack = new MyStack();\\n stack.push(null);\\n assertEquals(1, stack.size());\\n}"
+        },
+        {
+            "methodName": "testPopWithEmptyStack",
+            "code": "@Test \\nvoid testPopWithEmptyStack(){\\n MyStack stack = new MyStack();\\n assertThrows(ListEmptyException.class, () -> stack.pop());\\n}"
+        },
+        {
+            "methodName": "testPopWithNonEmptyStack",
+            "code": "@Test \\nvoid testPopWithNonEmptyStack(){\\n MyStack stack = new MyStack();\\n stack.push(1);\\n assertEquals(1, stack.pop());\\n}"
+        },
+        {
+            "methodName": "testToStringWithEmptyStack",
+            "code": "@Test \\nvoid testToStringWithEmptyStack(){\\n MyStack stack = new MyStack();\\n assertEquals(\"[]\", stack.toString());\\n}"
+        },
+        {
+            "methodName": "testToStringWithNonEmptyStack",
+            "code": "@Test \\nvoid testToStringWithNonEmptyStack(){\\n MyStack stack = new MyStack();\\n stack.push(1);\\n assertEquals(\"[1]\", stack.toString());\\n}"
+        }
+    ]
+}

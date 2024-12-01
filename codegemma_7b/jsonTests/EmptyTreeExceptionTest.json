@@ -1,0 +1,9 @@
+{
+    "className": "EmptyTreeException",
+    "testMethods": [
+        {
+            "methodName": "testConstructor",
+            "code": "@Test\nvoid testConstructor() {\n    try {\n        EmptyTreeException exception = new EmptyTreeException();\n        assertEquals(\"Baum ist leer.\", exception.getMessage());\n    } catch (Exception e) {\n        fail(\"Unexpected exception thrown: \" + e.getMessage());\n    }\n}"
+        }
+    ]
+}

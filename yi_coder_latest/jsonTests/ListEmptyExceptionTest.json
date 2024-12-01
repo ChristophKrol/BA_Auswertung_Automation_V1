@@ -1,0 +1,9 @@
+{
+    "className": "ListEmptyException",
+    "testMethods": [
+        {
+            "methodName": "testConstructorWithNoArguments",
+            "code": "@Test \\nvoid testConstructorWithNoArguments() throws ListEmptyException {\\n  ListEmptyException ex = new ListEmptyException();\\n assertEquals(\"Liste ist leer\", ex.getMessage());\\n}"
+        }
+    ]
+}

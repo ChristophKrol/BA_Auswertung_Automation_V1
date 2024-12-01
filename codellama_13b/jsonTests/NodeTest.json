@@ -1,0 +1,33 @@
+{
+    "className": "Node",
+    "testMethods": [
+        {
+            "methodName": "testConstructorWithValueAndNext",
+            "code": "@Test\nvoid testConstructorWithValueAndNext() {\n assertEquals(value, node.getValue());\n assertEquals(next, node.getNext());\n}"
+        },
+        {
+            "methodName": "testConstructorWithValue",
+            "code": "@Test\nvoid testConstructorWithValue() {\n assertEquals(value, node.getValue());\n assertNull(node.getNext());\n}"
+        },
+        {
+            "methodName": "testConstructorWithoutArguments",
+            "code": "@Test\nvoid testConstructorWithoutArguments() {\n assertNull(node.getValue());\n assertNull(node.getNext());\n}"
+        },
+        {
+            "methodName": "testConstructorWithValueAndNextAndPrev",
+            "code": "@Test\nvoid testConstructorWithValueAndNextAndPrev() {\n assertEquals(value, node.getValue());\n assertEquals(next, node.getNext());\n assertEquals(prev, node.getPrev());\n}"
+        },
+        {
+            "methodName": "testGetLastElement",
+            "code": "@Test\nvoid testGetLastElement() {\n assertEquals(lastElement, node.getLastElement().getValue());\n}"
+        },
+        {
+            "methodName": "testGetLast",
+            "code": "@Test\nvoid testGetLast() {\n assertEquals(lastValue, node.getLast().getValue());\n}"
+        },
+        {
+            "methodName": "testRemoveLast",
+            "code": "@Test\nvoid testRemoveLast() {\n assertEquals(removedValue, node.removeLast().getValue());\n}"
+        }
+    ]
+}

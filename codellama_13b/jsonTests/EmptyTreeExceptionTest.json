@@ -1,0 +1,21 @@
+{
+    "className": "EmptyTreeException",
+    "testMethods": [
+        {
+            "methodName": "testConstructorWithNoArguments",
+            "code": "@Test\nvoid testConstructorWithNoArguments(){\n assertEquals(\"Baum ist leer.\", new EmptyTreeException().getMessage());\n}"
+        },
+        {
+            "methodName": "testConstructorWithMessageArgument",
+            "code": "@Test\nvoid testConstructorWithMessageArgument(){\n assertEquals(\"Baum ist leer.\", new EmptyTreeException(\"Baum ist leer.\").getMessage());\n}"
+        },
+        {
+            "methodName": "testConstructorWithCauseArgument",
+            "code": "@Test\nvoid testConstructorWithCauseArgument(){\n assertEquals(new Throwable(), new EmptyTreeException(new Throwable()).getCause());\n}"
+        },
+        {
+            "methodName": "testConstructorWithMessageAndCauseArguments",
+            "code": "@Test\nvoid testConstructorWithMessageAndCauseArguments(){\n assertEquals(\"Baum ist leer.\", new EmptyTreeException(\"Baum ist leer.\", new Throwable()).getMessage());\n}"
+        }
+    ]
+}

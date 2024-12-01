@@ -1,0 +1,25 @@
+{
+    "className": "Stack",
+    "testMethods": [
+        {
+            "methodName": "testIsEmptyWithEmptyStack",
+            "code": "@Test\\nvoid testIsEmptyWithEmptyStack(){\\nassertTrue(new Stack().isEmpty());\\n}"
+        },
+        {
+            "methodName": "testIsEmptyWithNonEmptyStack",
+            "code": "@Test\\nvoid testIsEmptyWithNonEmptyStack(){\\nStack stack = new Stack();\\nstack.push(\"item\");\\nassertFalse(stack.isEmpty());\\n}"
+        },
+        {
+            "methodName": "testPushWithNullValue",
+            "code": "@Test(expected = NullPointerException.class)\\nvoid testPushWithNullValue(){\\nStack stack = new Stack();\\nstack.push(null);\\n}"
+        },
+        {
+            "methodName": "testPopWithEmptyStack",
+            "code": "@Test(expected = ListEmptyException.class)\\nvoid testPopWithEmptyStack(){\\nStack stack = new Stack();\\nstack.pop();\\n}"
+        },
+        {
+            "methodName": "testPopWithNonEmptyStack",
+            "code": "@Test\\nvoid testPopWithNonEmptyStack(){\\nStack stack = new Stack();\\nstack.push(\"item\");\\nassertEquals(\"item\", stack.pop());\\n}"
+        }
+    ]
+}

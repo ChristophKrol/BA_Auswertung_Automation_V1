@@ -1,0 +1,33 @@
+{
+    "className": "Xor",
+    "testMethods": [
+        {
+            "methodName": "testConvertToHexEmptyString",
+            "code": "@Test\nvoid testConvertToHexEmptyString(){\n    assertEquals(\" \", Xor.convertToHex(\"\"));\n}\n"
+        },
+        {
+            "methodName": "testConvertToHexSingleCharacter",
+            "code": "@Test\nvoid testConvertToHexSingleCharacter(){\n    assertEquals(\" 0 \" , Xor.convertToHex(\"a\"));\n}\n"
+        },
+        {
+            "methodName": "testConvertToHexMultipleCharacters",
+            "code": "@Test\nvoid testConvertToHexMultipleCharacters(){\n    assertEquals(\" 61 20 6c 61 72 67 65 20 74 65 78 74 \" , Xor.convertToHex(\"large text\"));\n}\n"
+        },
+        {
+            "methodName": "testXorEncryptEmptyMessage",
+            "code": "@Test\nvoid testXorEncryptEmptyMessage(){\n    List<String> encrypted = Xor.xorEncrypt(\"\", \"secret\");\n    assertEquals(new ArrayList<>(), encrypted);\n}\n"
+        },
+        {
+            "methodName": "testXorDecryptEmptyMessage",
+            "code": "@Test\nvoid testXorDecryptEmptyMessage(){\n    List<String> decrypted = Xor.xorDecrypt(new ArrayList<>(), \"secret\");\n    assertEquals(\"\", decrypted.get(0));\n}\n"
+        },
+        {
+            "methodName": "testXorEncryptSingleCharacter",
+            "code": "@Test\nvoid testXorEncryptSingleCharacter(){\n    List<String> encrypted = Xor.xorEncrypt(\"a\", \"secret\");\n    assertEquals(new ArrayList<>(Arrays.asList(\"0f\")), encrypted);\n}\n"
+        },
+        {
+            "methodName": "testXorDecryptSingleCharacter",
+            "code": "@Test\nvoid testXorDecryptSingleCharacter(){\n    List<String> decrypted = Xor.xorDecrypt(Arrays.asList(\"0f\"), \"secret\");\n    assertEquals(\"a\", decrypted.get(0));\n}\n"
+        }
+    ]
+}

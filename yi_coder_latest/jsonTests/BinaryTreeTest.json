@@ -1,0 +1,25 @@
+{
+    "className": "BinaryTree",
+    "testMethods": [
+        {
+            "methodName": "testInsertAndFind",
+            "code": "@Test \\nvoid testInsertAndFind() { \\nT value = (T) \"value\"; \\n BinaryTree<T> tree = new BinaryTree<>(); \\ntree.insert(value); \\n assertTrue(tree.find(value)); \\n}"
+        },
+        {
+            "methodName": "testIsEmpty",
+            "code": "@Test \\nvoid testIsEmpty() { \\n BinaryTree<T> tree = new BinaryTree<>(); \\n assertTrue(tree.isEmpty()); \\n}"
+        },
+        {
+            "methodName": "testFindMinRekursivAndMaxElement",
+            "code": "@Test \\nvoid testFindMinRekursivAndMaxElement() throws EmptyTreeException { \\nT value1 = (T) \"value1\"; \\n T value2 = (T) \"value2\"; \\n BinaryTree<T> tree = new BinaryTree<>(); \\ntree.insert(value1); \\n tree.insert(value2); \\n assertEquals(value1, tree.findMinRekursiv()); \\n assertEquals(value2, tree.findMaxElement()); \\n}"
+        },
+        {
+            "methodName": "testRemove",
+            "code": "@Test \\nvoid testRemove() throws EmptyTreeException { \\nT value = (T) \"value\"; \\n BinaryTree<T> tree = new BinaryTree<>(); \\ntree.insert(value); \\n assertTrue(tree.remove(value)); \\n assertFalse(tree.find(value)); \\n}"
+        },
+        {
+            "methodName": "testTraverse",
+            "code": "@Test \\nvoid testTraverse() { \\nT value = (T) \"value\"; \\n BinaryTree<T> tree = new BinaryTree<>(); \\ntree.insert(value); \\n assertNotNull(tree.traverse(Traversal.INORDER)); \\n}"
+        }
+    ]
+}

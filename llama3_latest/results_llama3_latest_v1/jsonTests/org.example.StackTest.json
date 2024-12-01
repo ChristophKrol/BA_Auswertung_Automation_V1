@@ -1,0 +1,21 @@
+{
+    "className": "org.example.Stack",
+    "testMethods": [
+        {
+            "methodName": "testIsEmptyWithFullStack",
+            "code": "@Test\nvoid testIsEmptyWithFullStack(){\n\tStack stack = new Stack();\n\tstack.push(1);\n\tassertFalse(stack.isEmpty());\n}\n"
+        },
+        {
+            "methodName": "testIsEmptyWithEmptyStack",
+            "code": "@Test\nvoid testIsEmptyWithEmptyStack(){\n\tStack stack = new Stack();\n\tassertTrue(stack.isEmpty());\n}\n"
+        },
+        {
+            "methodName": "testPushAndPop",
+            "code": "@Test\nvoid testPushAndPop() throws ListEmptyException{\n\tStack stack = new Stack();\n\tstack.push(1);\n\tObject popped = stack.pop();\n\tassertNotNull(popped);\n}\n"
+        },
+        {
+            "methodName": "testPopWithEmptyStack",
+            "code": "@Test\nvoid testPopWithEmptyStack() throws ListEmptyException{\n\tStack stack = new Stack();\n\ttry {\n\t\tstack.pop();\n\t} catch (ListEmptyException e) {\n\t\tassertNotNull(e);\n\t}\n}\n"
+        }
+    ]
+}

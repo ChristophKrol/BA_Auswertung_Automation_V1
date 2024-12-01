@@ -1,0 +1,29 @@
+{
+    "className": "MyQueue",
+    "testMethods": [
+        {
+            "methodName": "testIsEmptyWithEmptyQueue",
+            "code": "@Test \\nvoid testIsEmptyWithEmptyQueue(){\\n assertTrue(new MyQueue().isEmpty());\\n}"
+        },
+        {
+            "methodName": "testIsEmptyWithNonEmptyQueue",
+            "code": "@Test \\nvoid testIsEmptyWithNonEmptyQueue(){\\n MyQueue queue = new MyQueue();\\n queue.enter(1);\\n assertFalse(queue.isEmpty());\\n}"
+        },
+        {
+            "methodName": "testEnterWithNull",
+            "code": "@Test \\nvoid testEnterWithNull(){\\n MyQueue queue = new MyQueue();\\n queue.enter(null);\\n assertEquals(1, queue.size());\\n}"
+        },
+        {
+            "methodName": "testLeaveWithEmptyQueue",
+            "code": "@Test \\nvoid testLeaveWithEmptyQueue(){\\n MyQueue queue = new MyQueue();\\n try {\\n     queue.leave();\\n } catch (ListEmptyException e) {\\n     assertTrue(true);\\n }\\n}"
+        },
+        {
+            "methodName": "testLeaveWithNonEmptyQueue",
+            "code": "@Test \\nvoid testLeaveWithNonEmptyQueue(){\\n MyQueue queue = new MyQueue();\\n queue.enter(1);\\n Object result = queue.leave();\\n assertEquals(1, result);\\n}"
+        },
+        {
+            "methodName": "testToString",
+            "code": "@Test \\nvoid testToString(){\\n MyQueue queue = new MyQueue();\\n queue.enter(1);\\n queue.enter(2);\\n assertEquals(\"[1, 2]\", queue.toString());\\n}"
+        }
+    ]
+}

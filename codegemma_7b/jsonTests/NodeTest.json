@@ -1,0 +1,77 @@
+{
+    "className": "Node",
+    "testMethods": [
+        {
+            "methodName": "testConstructorWithNullValueAndNext",
+            "code": "@Test\nvoid testConstructorWithNullValueAndNext() {\n    Node node = new Node(null, null);\n    assertNull(node.getValue());\n    assertNull(node.getNext());\n}"
+        },
+        {
+            "methodName": "testConstructorWithNonNullValueAndNext",
+            "code": "@Test\nvoid testConstructorWithNonNullValueAndNext() {\n    Object value = new Object();\n    Node next = new Node(null, null);\n    Node node = new Node(value, next);\n    assertEquals(value, node.getValue());\n    assertEquals(next, node.getNext());\n}"
+        },
+        {
+            "methodName": "testConstructorWithNonNullValue",
+            "code": "@Test\nvoid testConstructorWithNonNullValue() {\n    Object value = new Object();\n    Node node = new Node(value);\n    assertEquals(value, node.getValue());\n    assertNull(node.getNext());\n}"
+        },
+        {
+            "methodName": "testConstructorWithNonNullValueAndPrev",
+            "code": "@Test\nvoid testConstructorWithNonNullValueAndPrev() {\n    Object value = new Object();\n    Node prev = new Node(null, null);\n    Node node = new Node(value, null, prev);\n    assertEquals(value, node.getValue());\n    assertNull(node.getNext());\n    assertEquals(prev, node.getPrev());\n}"
+        },
+        {
+            "methodName": "testGetPrevWithNonNullPrev",
+            "code": "@Test\nvoid testGetPrevWithNonNullPrev() {\n    Node prev = new Node(null, null);\n    Node node = new Node(null, null, prev);\n    assertEquals(prev, node.getPrev());\n}"
+        },
+        {
+            "methodName": "testSetPrevWithNonNullPrev",
+            "code": "@Test\nvoid testSetPrevWithNonNullPrev() {\n    Node prev = new Node(null, null);\n    Node node = new Node(null, null);\n    node.setPrev(prev);\n    assertEquals(prev, node.getPrev());\n}"
+        },
+        {
+            "methodName": "testGetValue",
+            "code": "@Test\nvoid testGetValue() {\n    Object value = new Object();\n    Node node = new Node(value);\n    assertEquals(value, node.getValue());\n}"
+        },
+        {
+            "methodName": "testSetValue",
+            "code": "@Test\nvoid testSetValue() {\n    Object value = new Object();\n    Node node = new Node(null);\n    node.setValue(value);\n    assertEquals(value, node.getValue());\n}"
+        },
+        {
+            "methodName": "testGetNextWithNonNullNext",
+            "code": "@Test\nvoid testGetNextWithNonNullNext() {\n    Node next = new Node(null, null);\n    Node node = new Node(null, next);\n    assertEquals(next, node.getNext());\n}"
+        },
+        {
+            "methodName": "testToStringWithNullNext",
+            "code": "@Test\nvoid testToStringWithNullNext() {\n    Node node = new Node(\"HEAD\", null);\n    assertEquals(\"[\"HEAD\"]\", node.toString());\n}"
+        },
+        {
+            "methodName": "testToStringWithNonNullNextAndDoubleLinkedList",
+            "code": "@Test\nvoid testToStringWithNonNullNextAndDoubleLinkedList() {\n    Node next = new Node(\"TAIL\", null);\n    Node node = new Node(\"HEAD\", next, null);\n    assertEquals(\"[\"HEAD\"]<->[\"TAIL\"]\", node.toString());\n}"
+        },
+        {
+            "methodName": "testToStringWithNonNullNextAndSingleLinkedList",
+            "code": "@Test\nvoid testToStringWithNonNullNextAndSingleLinkedList() {\n    Node next = new Node(\"TAIL\", null);\n    Node node = new Node(\"HEAD\", next);\n    assertEquals(\"[\"HEAD\"]->[\"TAIL\"]\", node.toString());\n}"
+        },
+        {
+            "methodName": "testRemoveLastWithNonNullNext",
+            "code": "@Test\nvoid testRemoveLastWithNonNullNext() {\n    Node next = new Node(\"TAIL\", null);\n    Node node = new Node(\"HEAD\", next);\n    assertEquals(\"TAIL\", node.removeLast());\n    assertEquals(\"HEAD\", node.toString());\n}"
+        },
+        {
+            "methodName": "testRemoveLastWithNullNext",
+            "code": "@Test\nvoid testRemoveLastWithNullNext() {\n    Node node = new Node(\"HEAD\", null);\n    assertNull(node.removeLast());\n    assertEquals(\"HEAD\", node.toString());\n}"
+        },
+        {
+            "methodName": "testLastWithNonNullNext",
+            "code": "@Test\nvoid testLastWithNonNullNext() {\n    Node next = new Node(\"TAIL\", null);\n    Node node = new Node(\"HEAD\", next);\n    assertEquals(\"TAIL\", node.getLast());\n}"
+        },
+        {
+            "methodName": "testLastWithNullNext",
+            "code": "@Test\nvoid testLastWithNullNext() {\n    Node node = new Node(\"HEAD\", null);\n    assertEquals(\"HEAD\", node.getLast());\n}"
+        },
+        {
+            "methodName": "testAddLastWithNonNullNext",
+            "code": "@Test\nvoid testAddLastWithNonNullNext() {\n    Node next = new Node(\"TAIL\", null);\n    Node node = new Node(\"HEAD\", next);\n    node.addLast(\"NEW_TAIL\");\n    assertEquals(\"[\"HEAD\"]<->[\"TAIL\"]<->[\"NEW_TAIL\"]\", node.toString());\n}"
+        },
+        {
+            "methodName": "testAddLastWithNullNext",
+            "code": "@Test\nvoid testAddLastWithNullNext() {\n    Node node = new Node(\"HEAD\", null);\n    node.addLast(\"NEW_TAIL\");\n    assertEquals(\"[\"HEAD\"]<->[\"NEW_TAIL\"]\", node.toString());\n}"
+        }
+    ]
+}

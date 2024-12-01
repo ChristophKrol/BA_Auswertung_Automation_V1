@@ -1,0 +1,13 @@
+{
+    "className": "ListEmptyException",
+    "testMethods": [
+        {
+            "methodName": "testConstructorWithEmptyMessage",
+            "code": "@Test\nvoid testConstructorWithEmptyMessage() {\n    ListEmptyException exception = new ListEmptyException();\n    assertEquals(\"Liste ist leer\", exception.getMessage());\n}"
+        },
+        {
+            "methodName": "testConstructorWithCustomMessage",
+            "code": "@Test\nvoid testConstructorWithCustomMessage() {\n    String customMessage = \"Custom message\";\n    ListEmptyException exception = new ListEmptyException(customMessage);\n    assertEquals(customMessage, exception.getMessage());\n}"
+        }
+    ]
+}

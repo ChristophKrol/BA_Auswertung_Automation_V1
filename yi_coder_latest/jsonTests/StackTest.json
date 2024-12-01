@@ -1,0 +1,21 @@
+{
+    "className": "Stack",
+    "testMethods": [
+        {
+            "methodName": "testIsEmptyWithNewStack",
+            "code": "@Test \\nvoid testIsEmptyWithNewStack() throws ListEmptyException{\\n Stack stack = new MyStack();\\n assertTrue(stack.isEmpty());\\n}"
+        },
+        {
+            "methodName": "testPushAndPopOneElement",
+            "code": "@Test \\nvoid testPushAndPopOneElement() throws ListEmptyException{\\n Stack stack = new MyStack();\\n Object o = new Object();\\n stack.push(o);\\n assertEquals(o, stack.pop());\\n}"
+        },
+        {
+            "methodName": "testPushAndPopMultipleElements",
+            "code": "@Test \\nvoid testPushAndPopMultipleElements() throws ListEmptyException{\\n Stack stack = new MyStack();\\n Object o1 = new Object();\\n Object o2 = new Object();\\n Object o3 = new Object();\\n stack.push(o1);\\n stack.push(o2);\\n stack.push(o3);\\n assertEquals(o3, stack.pop());\\n assertEquals(o2, stack.pop());\\n assertEquals(o1, stack.pop());\\n}"
+        },
+        {
+            "methodName": "testPopOnEmptyStack",
+            "code": "@Test (expected = ListEmptyException.class)\\nvoid testPopOnEmptyStack() throws ListEmptyException{\\n Stack stack = new MyStack();\\n stack.pop();\\n}"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "className": "Queue",
+    "testMethods": [
+        {
+            "methodName": "testIsEmptyWithEmptyQueue",
+            "code": "@Test\nvoid testIsEmptyWithEmptyQueue() {\n assertTrue(queue.isEmpty());\n}"
+        },
+        {
+            "methodName": "testIsEmptyWithNonEmptyQueue",
+            "code": "@Test\nvoid testIsEmptyWithNonEmptyQueue() {\n queue.enter(new Object());\n assertFalse(queue.isEmpty());\n}"
+        },
+        {
+            "methodName": "testEnterMethod",
+            "code": "@Test\nvoid testEnterMethod() {\n queue.enter(new Object());\n assertEquals(new Object(), queue.leave());\n}"
+        },
+        {
+            "methodName": "testLeaveMethodWithEmptyQueue",
+            "code": "@Test\nvoid testLeaveMethodWithEmptyQueue() {\n assertThrows(ListEmptyException.class, () -> queue.leave());\n}"
+        },
+        {
+            "methodName": "testLeaveMethodWithNonEmptyQueue",
+            "code": "@Test\nvoid testLeaveMethodWithNonEmptyQueue() {\n queue.enter(new Object());\n assertEquals(new Object(), queue.leave());\n}"
+        }
+    ]
+}

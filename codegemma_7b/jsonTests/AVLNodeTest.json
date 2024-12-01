@@ -1,0 +1,57 @@
+{
+    "className": "AVLNode",
+    "testMethods": [
+        {
+            "methodName": "testConstructor",
+            "code": "@Test\nvoid testConstructor() {\n    AVLNode<Integer> node = new AVLNode<>(10);\n    assertEquals(10, node.getValue());\n}"
+        },
+        {
+            "methodName": "testGetLeft",
+            "code": "@Test\nvoid testGetLeft() {\n    AVLNode<Integer> node = new AVLNode<>(10);\n    assertNull(node.getLeft());\n}"
+        },
+        {
+            "methodName": "testSetLeft",
+            "code": "@Test\nvoid testSetLeft() {\n    AVLNode<Integer> node = new AVLNode<>(10);\n    AVLNode<Integer> leftNode = new AVLNode<>(5);\n    node.setLeft(leftNode);\n    assertEquals(leftNode, node.getLeft());\n}"
+        },
+        {
+            "methodName": "testGetRight",
+            "code": "@Test\nvoid testGetRight() {\n    AVLNode<Integer> node = new AVLNode<>(10);\n    assertNull(node.getRight());\n}"
+        },
+        {
+            "methodName": "testSetRight",
+            "code": "@Test\nvoid testSetRight() {\n    AVLNode<Integer> node = new AVLNode<>(10);\n    AVLNode<Integer> rightNode = new AVLNode<>(15);\n    node.setRight(rightNode);\n    assertEquals(rightNode, node.getRight());\n}"
+        },
+        {
+            "methodName": "testGetBalance",
+            "code": "@Test\nvoid testGetBalance() {\n    AVLNode<Integer> node = new AVLNode<>(10);\n    assertEquals(0, node.getBalance());\n}"
+        },
+        {
+            "methodName": "testSetBalance",
+            "code": "@Test\nvoid testSetBalance() {\n    AVLNode<Integer> node = new AVLNode<>(10);\n    node.setBalance(5);\n    assertEquals(5, node.getBalance());\n}"
+        },
+        {
+            "methodName": "testGetHeight",
+            "code": "@Test\nvoid testGetHeight() {\n    AVLNode<Integer> node = new AVLNode<>(10);\n    assertEquals(1, node.getHeight());\n}"
+        },
+        {
+            "methodName": "testSetHeight",
+            "code": "@Test\nvoid testSetHeight() {\n    AVLNode<Integer> node = new AVLNode<>(10);\n    node.setHeight(5);\n    assertEquals(5, node.getHeight());\n}"
+        },
+        {
+            "methodName": "testGetTotalNumberOfChildren",
+            "code": "@Test\nvoid testGetTotalNumberOfChildren() {\n    AVLNode<Integer> node = new AVLNode<>(10);\n    assertEquals(1, node.getTotalNumberOfChildren());\n}"
+        },
+        {
+            "methodName": "testGetTotalNumberOfChildrenWithLeftChild",
+            "code": "@Test\nvoid testGetTotalNumberOfChildrenWithLeftChild() {\n    AVLNode<Integer> node = new AVLNode<>(10);\n    AVLNode<Integer> leftNode = new AVLNode<>(5);\n    node.setLeft(leftNode);\n    assertEquals(2, node.getTotalNumberOfChildren());\n}"
+        },
+        {
+            "methodName": "testGetTotalNumberOfChildrenWithRightChild",
+            "code": "@Test\nvoid testGetTotalNumberOfChildrenWithRightChild() {\n    AVLNode<Integer> node = new AVLNode<>(10);\n    AVLNode<Integer> rightNode = new AVLNode<>(15);\n    node.setRight(rightNode);\n    assertEquals(2, node.getTotalNumberOfChildren());\n}"
+        },
+        {
+            "methodName": "testGetTotalNumberOfChildrenWithBothChildren",
+            "code": "@Test\nvoid testGetTotalNumberOfChildrenWithBothChildren() {\n    AVLNode<Integer> node = new AVLNode<>(10);\n    AVLNode<Integer> leftNode = new AVLNode<>(5);\n    AVLNode<Integer> rightNode = new AVLNode<>(15);\n    node.setLeft(leftNode);\n    node.setRight(rightNode);\n    assertEquals(4, node.getTotalNumberOfChildren());\n}"
+        }
+    ]
+}

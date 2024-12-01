@@ -1,0 +1,29 @@
+{
+    "className": "org.example.Queue",
+    "testMethods": [
+        {
+            "methodName": "testIsEmptyWithNotEmptyQueue",
+            "code": "@Test\nvoid testIsEmptyWithNotEmptyQueue(){\n\tQueue queue = new Queue();\n\tqueue.enter(\"value\");\n\tassertFalse(queue.isEmpty());\n}\n"
+        },
+        {
+            "methodName": "testIsEmptyWithEmptyQueue",
+            "code": "@Test\nvoid testIsEmptyWithEmptyQueue(){\n\tQueue queue = new Queue();\n\tassertTrue(queue.isEmpty());\n}\n"
+        },
+        {
+            "methodName": "testEnterMethod",
+            "code": "@Test\nvoid testEnterMethod(){\n\tQueue queue = new Queue();\n\tqueue.enter(\"value\");\n}\n"
+        },
+        {
+            "methodName": "testLeaveMethodWithNotEmptyQueue",
+            "code": "@Test\nvoid testLeaveMethodWithNotEmptyQueue() throws ListEmptyException{\n\tQueue queue = new Queue();\n\tqueue.enter(\"value\");\n\tObject value = queue.leave();\n\tassertNotNull(value);\n}\n"
+        },
+        {
+            "methodName": "testLeaveMethodWithEmptyQueue",
+            "code": "@Test\nvoid testLeaveMethodWithEmptyQueue() throws ListEmptyException{\n\tQueue queue = new Queue();\n\ttry {\n\t\tqueue.leave();\n\t} catch (ListEmptyException e) {\n\t\tassertNotNull(e);\n\t}\n}\n"
+        },
+        {
+            "methodName": "testLeaveMethodWithMultipleElements",
+            "code": "@Test\nvoid testLeaveMethodWithMultipleElements() throws ListEmptyException{\n\tQueue queue = new Queue();\n\tqueue.enter(\"value1\");\n\tqueue.enter(\"value2\");\n\tObject value = queue.leave();\n\tassertNotNull(value);\n}\n"
+        }
+    ]
+}

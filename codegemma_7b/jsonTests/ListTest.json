@@ -1,0 +1,37 @@
+{
+    "className": "List",
+    "testMethods": [
+        {
+            "methodName": "testIsEmptyWithEmptyList",
+            "code": "@Test\nvoid testIsEmptyWithEmptyList() {\n assertTrue(list.isEmpty());\n}"
+        },
+        {
+            "methodName": "testIsEmptyWithNonEmptyList",
+            "code": "@Test\nvoid testIsEmptyWithNonEmptyList() {\n list.addFirst(new Object());\n assertFalse(list.isEmpty());\n}"
+        },
+        {
+            "methodName": "testAddFirst",
+            "code": "@Test\nvoid testAddFirst() {\n list.addFirst(new Object());\n assertEquals(new Object(), list.getFirst());\n}"
+        },
+        {
+            "methodName": "testGetFirstWithEmptyList",
+            "code": "@Test\nvoid testGetFirstWithEmptyList() {\n assertThrows(ListEmptyException.class, () -> list.getFirst());\n}"
+        },
+        {
+            "methodName": "testRemoveFirstWithEmptyList",
+            "code": "@Test\nvoid testRemoveFirstWithEmptyList() {\n assertThrows(ListEmptyException.class, () -> list.removeFirst());\n}"
+        },
+        {
+            "methodName": "testAddLast",
+            "code": "@Test\nvoid testAddLast() {\n list.addLast(new Object());\n assertEquals(new Object(), list.getLast());\n}"
+        },
+        {
+            "methodName": "testGetLastWithEmptyList",
+            "code": "@Test\nvoid testGetLastWithEmptyList() {\n assertThrows(ListEmptyException.class, () -> list.getLast());\n}"
+        },
+        {
+            "methodName": "testRemoveLastWithEmptyList",
+            "code": "@Test\nvoid testRemoveLastWithEmptyList() {\n assertThrows(ListEmptyException.class, () -> list.removeLast());\n}"
+        }
+    ]
+}

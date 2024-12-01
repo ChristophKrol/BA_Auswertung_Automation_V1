@@ -1,0 +1,9 @@
+{
+    "className": "CLASSNAME",
+    "testMethods": [
+        {
+            "methodName": "testListEmptyExceptionIsThrownWhenCallingMaxWithEmptyArray",
+            "code": "@Test \nvoid testListEmptyExceptionIsThrownWhenCallingMaxWithEmptyArray() throws ListEmptyException {\n    try {\n        Max.max(new Item[0], 0);\n        fail(\"Expected ListEmptyException to be thrown\");\n    } catch (ListEmptyException e) {}\n}"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "className": "org.example",
+    "testMethods": [
+        {
+            "methodName": "testTraversalValues",
+            "code": "@Test \nvoid testTraversalValues(){\n assertEquals(Traversal.POSTORDER, Traversal.POSTORDER);\n assertEquals(Traversal.INORDER, Traversal.INORDER);\n assertEquals(Traversal.PREORDER, Traversal.PREORDER);\n} \nthrows Exception"
+        }
+    ]
+}

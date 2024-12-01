@@ -1,0 +1,45 @@
+{
+    "className": "BinaryTree",
+    "testMethods": [
+        {
+            "methodName": "testConstructorWithNullValue",
+            "code": "@Test\nvoid testConstructorWithNullValue() {\n assertNull(new BinaryTree<Integer>(null));\n}"
+        },
+        {
+            "methodName": "testInsertWithEmptyTree",
+            "code": "@Test\nvoid testInsertWithEmptyTree() {\n BinaryTree<Integer> tree = new BinaryTree<>();\n assertTrue(tree.insert(5));\n assertEquals(5, tree.getRoot().getKey());\n}"
+        },
+        {
+            "methodName": "testFindWithExistingValue",
+            "code": "@Test\nvoid testFindWithExistingValue() {\n BinaryTree<Integer> tree = new BinaryTree<>(5);\n assertTrue(tree.find(5));\n}"
+        },
+        {
+            "methodName": "testFindWithNonExistingValue",
+            "code": "@Test\nvoid testFindWithNonExistingValue() {\n BinaryTree<Integer> tree = new BinaryTree<>(5);\n assertFalse(tree.find(10));\n}"
+        },
+        {
+            "methodName": "testFindMinRekursivWithEmptyTree",
+            "code": "@Test\nvoid testFindMinRekursivWithEmptyTree() {\n BinaryTree<Integer> tree = new BinaryTree<>();\n try {\n tree.findMinRekursiv();\n fail(\"Expected EmptyTreeException\");\n } catch (EmptyTreeException e) {\n // Expected exception\n }\n}"
+        },
+        {
+            "methodName": "testFindMinIterativWithEmptyTree",
+            "code": "@Test\nvoid testFindMinIterativWithEmptyTree() {\n BinaryTree<Integer> tree = new BinaryTree<>();\n try {\n tree.findMinIterativ();\n fail(\"Expected EmptyTreeException\");\n } catch (EmptyTreeException e) {\n // Expected exception\n }\n}"
+        },
+        {
+            "methodName": "testFindMaxElementWithEmptyTree",
+            "code": "@Test\nvoid testFindMaxElementWithEmptyTree() {\n BinaryTree<Integer> tree = new BinaryTree<>();\n try {\n tree.findMaxElement();\n fail(\"Expected EmptyTreeException\");\n } catch (EmptyTreeException e) {\n // Expected exception\n }\n}"
+        },
+        {
+            "methodName": "testRemoveWithNonExistingValue",
+            "code": "@Test\nvoid testRemoveWithNonExistingValue() {\n BinaryTree<Integer> tree = new BinaryTree<>(5);\n assertFalse(tree.remove(10));\n}"
+        },
+        {
+            "methodName": "testTraverseWithInOrderTraversal",
+            "code": "@Test\nvoid testTraverseWithInOrderTraversal() {\n BinaryTree<Integer> tree = new BinaryTree<>(5);\n tree.insert(3);\n tree.insert(7);\n assertEquals(\"3 5 7\", tree.traverse(Traversal.IN_ORDER));\n}"
+        },
+        {
+            "methodName": "testToStringWithEmptyTree",
+            "code": "@Test\nvoid testToStringWithEmptyTree() {\n BinaryTree<Integer> tree = new BinaryTree<>();\n assertNull(tree.toString());\n}"
+        }
+    ]
+}

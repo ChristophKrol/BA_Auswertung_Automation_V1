@@ -1,0 +1,29 @@
+{
+    "className": "Node",
+    "testMethods": [
+        {
+            "methodName": "testAddLastWithEmptyList",
+            "code": "@Test \\nvoid testAddLastWithEmptyList(){\\n Node node = new Node();\\n node.addLast(10);\\n assertEquals(\"[HEAD]->[10]\", node.toString());\\n}"
+        },
+        {
+            "methodName": "testAddLastWithNonEmptyList",
+            "code": "@Test \\nvoid testAddLastWithNonEmptyList(){\\n Node node = new Node(10);\\n node.addLast(20);\\n assertEquals(\"[HEAD]->[10]=>[20]\", node.toString());\\n}"
+        },
+        {
+            "methodName": "testGetLastElementWithEmptyList",
+            "code": "@Test \\nvoid testGetLastElementWithEmptyList(){\\n Node node = new Node();\\n assertNull(node.getLastElement());\\n}"
+        },
+        {
+            "methodName": "testGetLastElementWithNonEmptyList",
+            "code": "@Test \\nvoid testGetLastElementWithNonEmptyList(){\\n Node node = new Node(10);\\n node.addLast(20);\\n assertEquals(20, node.getLastElement().getValue());\\n}"
+        },
+        {
+            "methodName": "testRemoveLastWithEmptyList",
+            "code": "@Test \\nvoid testRemoveLastWithEmptyList(){\\n Node node = new Node();\\n assertNull(node.removeLast());\\n}"
+        },
+        {
+            "methodName": "testRemoveLastWithNonEmptyList",
+            "code": "@Test \\nvoid testRemoveLastWithNonEmptyList(){\\n Node node = new Node(10);\\n node.addLast(20);\\n assertEquals(20, node.removeLast());\\n}"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "className": "Stack",
+    "testMethods": [
+        {
+            "methodName": "testIsEmptyWithEmptyStack",
+            "code": "@Test\nvoid testIsEmptyWithEmptyStack() {\n assertTrue(stack.isEmpty());\n}"
+        },
+        {
+            "methodName": "testIsEmptyWithNonEmptyStack",
+            "code": "@Test\nvoid testIsEmptyWithNonEmptyStack() {\n stack.push(new Object());\n assertFalse(stack.isEmpty());\n}"
+        },
+        {
+            "methodName": "testPushWithNullObject",
+            "code": "@Test\nvoid testPushWithNullObject() {\n stack.push(null);\n}"
+        },
+        {
+            "methodName": "testPopWithEmptyStack",
+            "code": "@Test\nvoid testPopWithEmptyStack() {\n assertThrows(ListEmptyException.class, () -> stack.pop());\n}"
+        },
+        {
+            "methodName": "testPopWithNonEmptyStack",
+            "code": "@Test\nvoid testPopWithNonEmptyStack() {\n stack.push(new Object());\n Object poppedObject = stack.pop();\n assertNotNull(poppedObject);\n}"
+        }
+    ]
+}

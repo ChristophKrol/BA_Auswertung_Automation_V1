@@ -1,0 +1,17 @@
+{
+    "className": "Traversal",
+    "testMethods": [
+        {
+            "methodName": "testPostorder",
+            "code": "@Test \\nvoid testPostorder(){\\n assertEquals(Traversal.POSTORDER, Traversal.POSTORDER);\\n}"
+        },
+        {
+            "methodName": "testInorder",
+            "code": "@Test \\nvoid testInorder(){\\n assertEquals(Traversal.INORDER, Traversal.INORDER);\\n}"
+        },
+        {
+            "methodName": "testPreorder",
+            "code": "@Test \\nvoid testPreorder(){\\n assertEquals(Traversal.PREORDER, Traversal.PREORDER);\\n}"
+        }
+    ]
+}

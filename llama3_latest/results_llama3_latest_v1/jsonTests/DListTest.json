@@ -1,0 +1,29 @@
+{
+    "className": "DList",
+    "testMethods": [
+        {
+            "methodName": "testIsEmptyWhenCreated",
+            "code": "@Test \nvoid testIsEmptyWhenCreated(){\n assertEquals(true, new DList().isEmpty());\n}"
+        },
+        {
+            "methodName": "testAddFirst",
+            "code": "@Test \nvoid testAddFirst(){\n DList list = new DList(); list.addFirst(\"value1\"); list.addFirst(\"value2\"); assertEquals(\"value2\", list.removeFirst());\n}"
+        },
+        {
+            "methodName": "testRemoveFirst",
+            "code": "@Test \nvoid testRemoveFirst() throws ListEmptyException {\n DList list = new DList(); list.addFirst(\"value1\"); assertEquals(\"value1\", list.removeFirst());\n}"
+        },
+        {
+            "methodName": "testGetLast",
+            "code": "@Test \nvoid testGetLast() throws ListEmptyException {\n DList list = new DList(); list.addLast(\"value1\"); assertEquals(\"value1\", list.getLast());\n}"
+        },
+        {
+            "methodName": "testAddLast",
+            "code": "@Test \nvoid testAddLast(){\n DList list = new DList(); list.addLast(\"value1\"); list.addLast(\"value2\"); assertEquals(\"value2\", list.removeLast());\n}"
+        },
+        {
+            "methodName": "testRemoveLast",
+            "code": "@Test \nvoid testRemoveLast() throws ListEmptyException {\n DList list = new DList(); list.addLast(\"value1\"); assertEquals(\"value1\", list.removeLast());\n}"
+        }
+    ]
+}

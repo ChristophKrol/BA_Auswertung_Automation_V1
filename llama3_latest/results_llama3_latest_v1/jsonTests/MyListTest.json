@@ -1,0 +1,37 @@
+{
+    "className": "MyList",
+    "testMethods": [
+        {
+            "methodName": "testEmptyList",
+            "code": "@Test \nvoid testEmptyList(){\n    MyList list = new MyList(); \n    assertTrue(list.isEmpty());\n}\n"
+        },
+        {
+            "methodName": "testAddFirst",
+            "code": "@Test \nvoid testAddFirst(){\n    MyList list = new MyList(); \n    list.addFirst(\"Value1\"); \n    assertFalse(list.isEmpty());\n}\n"
+        },
+        {
+            "methodName": "testGetFirst",
+            "code": "@Test \nvoid testGetFirst() throws ListEmptyException{\n    MyList list = new MyList(\"Value1\"); \n    assertEquals(\"Value1\", list.getFirst());\n}\n"
+        },
+        {
+            "methodName": "testRemoveFirst",
+            "code": "@Test \nvoid testRemoveFirst() throws ListEmptyException{\n    MyList list = new MyList(\"Value1\"); \n    list.removeFirst(); \n    assertEquals(null, list.getFirst());\n}\n"
+        },
+        {
+            "methodName": "testAddLast",
+            "code": "@Test \nvoid testAddLast(){\n    MyList list = new MyList(); \n    list.addLast(\"Value1\"); \n    assertFalse(list.isEmpty());\n}\n"
+        },
+        {
+            "methodName": "testGetLast",
+            "code": "@Test \nvoid testGetLast() throws ListEmptyException{\n    MyList list = new MyList(\"Value1\", \"Value2\"); \n    assertEquals(\"Value2\", list.getLast());\n}\n"
+        },
+        {
+            "methodName": "testRemoveLast",
+            "code": "@Test \nvoid testRemoveLast() throws ListEmptyException{\n    MyList list = new MyList(\"Value1\", \"Value2\"); \n    list.removeLast(); \n    assertEquals(\"Value1\", list.getLast());\n}\n"
+        },
+        {
+            "methodName": "testToString",
+            "code": "@Test \nvoid testToString(){\n    MyList list = new MyList(\"Value1\", \"Value2\"); \n    assertEquals(\"[Value1, Value2]\", list.toString());\n}\n"
+        }
+    ]
+}

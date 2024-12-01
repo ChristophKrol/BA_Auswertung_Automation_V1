@@ -1,0 +1,85 @@
+{
+    "className": "Xor",
+    "testMethods": [
+        {
+            "methodName": "convertToHex_withNullValue_returnsEmptyString",
+            "code": "@Test\nvoid convertToHex_withNullValue_returnsEmptyString(){\n assertEquals(\"\", Xor.convertToHex(null));\n}"
+        },
+        {
+            "methodName": "convertToHex_withEmptyString_returnsEmptyString",
+            "code": "@Test\nvoid convertToHex_withEmptyString_returnsEmptyString(){\n assertEquals(\"\", Xor.convertToHex(\"\"));\n}"
+        },
+        {
+            "methodName": "convertToHex_withSingleCharacter_returnsCorrectHexValue",
+            "code": "@Test\nvoid convertToHex_withSingleCharacter_returnsCorrectHexValue(){\n assertEquals(\"67\", Xor.convertToHex(\"g\"));\n}"
+        },
+        {
+            "methodName": "convertToHex_withMultipleCharacters_returnsCorrectHexValues",
+            "code": "@Test\nvoid convertToHex_withMultipleCharacters_returnsCorrectHexValues(){\n assertEquals(\"67 68\", Xor.convertToHex(\"gh\"));\n}"
+        },
+        {
+            "methodName": "convertToHexArray_withNullValue_returnsEmptyList",
+            "code": "@Test\nvoid convertToHexArray_withNullValue_returnsEmptyList(){\n assertEquals(0, Xor.convertToHexArray(null).size());\n}"
+        },
+        {
+            "methodName": "convertToHexArray_withEmptyString_returnsEmptyList",
+            "code": "@Test\nvoid convertToHexArray_withEmptyString_returnsEmptyList(){\n assertEquals(0, Xor.convertToHexArray(\"\").size());\n}"
+        },
+        {
+            "methodName": "convertToHexArray_withSingleCharacter_returnsCorrectHexValue",
+            "code": "@Test\nvoid convertToHexArray_withSingleCharacter_returnsCorrectHexValue(){\n assertEquals(\"67\", Xor.convertToHexArray(\"g\")[0]);\n}"
+        },
+        {
+            "methodName": "convertToHexArray_withMultipleCharacters_returnsCorrectHexValues",
+            "code": "@Test\nvoid convertToHexArray_withMultipleCharacters_returnsCorrectHexValues(){\n assertEquals(\"67 68\", Xor.convertToHexArray(\"gh\")[0]);\n}"
+        },
+        {
+            "methodName": "xorEncrypt_withNullMessageAndKey_throwsException",
+            "code": "@Test(expected = NullPointerException.class)\nvoid xorEncrypt_withNullMessageAndKey_throwsException(){\n Xor.xorEncrypt(null, null);\n}"
+        },
+        {
+            "methodName": "xorEncrypt_withEmptyMessageAndKey_returnsEmptyList",
+            "code": "@Test\nvoid xorEncrypt_withEmptyMessageAndKey_returnsEmptyList(){\n assertEquals(0, Xor.xorEncrypt(\"\", \"\").size());\n}"
+        },
+        {
+            "methodName": "xorEncrypt_withSingleCharacterMessageAndKey_returnsCorrectHexValue",
+            "code": "@Test\nvoid xorEncrypt_withSingleCharacterMessageAndKey_returnsCorrectHexValue(){\n assertEquals(\"67\", Xor.xorEncrypt(\"g\", \"s\")[0]);\n}"
+        },
+        {
+            "methodName": "xorEncrypt_withMultipleCharactersMessageAndKey_returnsCorrectHexValues",
+            "code": "@Test\nvoid xorEncrypt_withMultipleCharactersMessageAndKey_returnsCorrectHexValues(){\n assertEquals(\"67 68\", Xor.xorEncrypt(\"gh\", \"ss\")[0]);\n}"
+        },
+        {
+            "methodName": "xorDecrypt_withNullCipherAndKey_throwsException",
+            "code": "@Test(expected = NullPointerException.class)\nvoid xorDecrypt_withNullCipherAndKey_throwsException(){\n Xor.xorDecrypt(null, null);\n}"
+        },
+        {
+            "methodName": "xorDecrypt_withEmptyCipherAndKey_returnsEmptyString",
+            "code": "@Test\nvoid xorDecrypt_withEmptyCipherAndKey_returnsEmptyString(){\n assertEquals(\"\", Xor.xorDecrypt(new ArrayList<>(), \"\"));\n}"
+        },
+        {
+            "methodName": "xorDecrypt_withSingleCharacterCipherAndKey_returnsCorrectHexValue",
+            "code": "@Test\nvoid xorDecrypt_withSingleCharacterCipherAndKey_returnsCorrectHexValue(){\n assertEquals(\"67\", Xor.xorDecrypt(new ArrayList<>(), \"s\")[0]);\n}"
+        },
+        {
+            "methodName": "xorDecrypt_withMultipleCharactersCipherAndKey_returnsCorrectHexValues",
+            "code": "@Test\nvoid xorDecrypt_withMultipleCharactersCipherAndKey_returnsCorrectHexValues(){\n assertEquals(\"67 68\", Xor.xorDecrypt(new ArrayList<>(), \"ss\")[0]);\n}"
+        },
+        {
+            "methodName": "createKey_withNullMessageAndKey_throwsException",
+            "code": "@Test(expected = NullPointerException.class)\nvoid createKey_withNullMessageAndKey_throwsException(){\n Xor.createKey(null, null);\n}"
+        },
+        {
+            "methodName": "createKey_withEmptyMessageAndKey_returnsEmptyList",
+            "code": "@Test\nvoid createKey_withEmptyMessageAndKey_returnsEmptyList(){\n assertEquals(0, Xor.createKey(\"\", \"\").size());\n}"
+        },
+        {
+            "methodName": "createKey_withSingleCharacterMessageAndKey_returnsCorrectHexValue",
+            "code": "@Test\nvoid createKey_withSingleCharacterMessageAndKey_returnsCorrectHexValue(){\n assertEquals(\"67\", Xor.createKey(\"g\", \"s\")[0]);\n}"
+        },
+        {
+            "methodName": "createKey_withMultipleCharactersMessageAndKey_returnsCorrectHexValues",
+            "code": "@Test\nvoid createKey_withMultipleCharactersMessageAndKey_returnsCorrectHexValues(){\n assertEquals(\"67 68\", Xor.createKey(\"gh\", \"ss\")[0]);\n}"
+        }
+    ]
+}

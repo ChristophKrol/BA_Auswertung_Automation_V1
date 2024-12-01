@@ -1,0 +1,41 @@
+{
+    "className": "AVLNode",
+    "testMethods": [
+        {
+            "methodName": "testGetLeft",
+            "code": "@Test\nvoid testGetLeft(){\n    AVLNode<String> node = new AVLNode<>(\"value\");\n    assertNull(node.getLeft());\n}"
+        },
+        {
+            "methodName": "testSetLeft",
+            "code": "@Test\nvoid testSetLeft(){\n    AVLNode<String> node = new AVLNode<>(\"value\");\n    AVLNode<String> leftChild = new AVLNode<>(\"leftValue\");\n    node.setLeft(leftChild);\n    assertEquals(leftChild, node.getLeft());\n}"
+        },
+        {
+            "methodName": "testGetRight",
+            "code": "@Test\nvoid testGetRight(){\n    AVLNode<String> node = new AVLNode<>(\"value\");\n    assertNull(node.getRight());\n}"
+        },
+        {
+            "methodName": "testSetRight",
+            "code": "@Test\nvoid testSetRight(){\n    AVLNode<String> node = new AVLNode<>(\"value\");\n    AVLNode<String> rightChild = new AVLNode<>(\"rightValue\");\n    node.setRight(rightChild);\n    assertEquals(rightChild, node.getRight());\n}"
+        },
+        {
+            "methodName": "testGetBalance",
+            "code": "@Test\nvoid testGetBalance(){\n    AVLNode<String> node = new AVLNode<>(\"value\");\n    assertEquals(0, node.getBalance());\n}"
+        },
+        {
+            "methodName": "testSetBalance",
+            "code": "@Test\nvoid testSetBalance(){\n    AVLNode<String> node = new AVLNode<>(\"value\");\n    node.setBalance(1);\n    assertEquals(1, node.getBalance());\n}"
+        },
+        {
+            "methodName": "testGetHeight",
+            "code": "@Test\nvoid testGetHeight(){\n    AVLNode<String> node = new AVLNode<>(\"value\");\n    assertEquals(0, node.getHeight());\n}"
+        },
+        {
+            "methodName": "testSetHeight",
+            "code": "@Test\nvoid testSetHeight(){\n    AVLNode<String> node = new AVLNode<>(\"value\");\n    node.setHeight(1);\n    assertEquals(1, node.getHeight());\n}"
+        },
+        {
+            "methodName": "testTotalNumberOfChildren",
+            "code": "@Test\nvoid testTotalNumberOfChildren(){\n    AVLNode<String> node = new AVLNode<>(\"value\");\n    assertEquals(0, node.getTotalNumberOfChildren());\n}"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "className": "DList",
+    "testMethods": [
+        {
+            "methodName": "testAddFirstWithEmptyList",
+            "code": "@Test \\nvoid testAddFirstWithEmptyList(){\\n DList list = new DList();\\n assertTrue(list.isEmpty());\\n list.addFirst(\"value\");\\n assertFalse(list.isEmpty());\\n}"
+        },
+        {
+            "methodName": "testAddFirstWithNonEmptyList",
+            "code": "@Test \\nvoid testAddFirstWithNonEmptyList(){\\n DList list = new DList();\\n list.addFirst(\"value1\");\\n assertFalse(list.isEmpty());\\n list.addFirst(\"value2\");\\n assertEquals(\"[value2, value1]\", list.toString());\\n}"
+        },
+        {
+            "methodName": "testRemoveFirstWithEmptyList",
+            "code": "@Test \\nvoid testRemoveFirstWithEmptyList(){\\n DList list = new DList();\\n assertThrows(ListEmptyException.class, () -> {list.removeFirst();});\\n}"
+        },
+        {
+            "methodName": "testRemoveFirstWithNonEmptyList",
+            "code": "@Test \\nvoid testRemoveFirstWithNonEmptyList(){\\n DList list = new DList();\\n list.addFirst(\"value1\");\\n assertFalse(list.isEmpty());\\n Object value = list.removeFirst();\\n assertEquals(\"value1\", value);\\n assertTrue(list.isEmpty());\\n}"
+        },
+        {
+            "methodName": "testGetLastWithEmptyList",
+            "code": "@Test \\nvoid testGetLastWithEmptyList(){\\n DList list = new DList();\\n assertThrows(ListEmptyException.class, () -> {list.getLast();});\\n}"
+        },
+        {
+            "methodName": "testGetLastWithNonEmptyList",
+            "code": "@Test \\nvoid testGetLastWithNonEmptyList(){\\n DList list = new DList();\\n list.addFirst(\"value1\");\\n assertFalse(list.isEmpty());\\n Object value = list.getLast();\\n assertEquals(\"value1\", value);\\n}"
+        },
+        {
+            "methodName": "testAddLastWithEmptyList",
+            "code": "@Test \\nvoid testAddLastWithEmptyList(){\\n DList list = new DList();\\n assertTrue(list.isEmpty());\\n list.addLast(\"value\");\\n assertFalse(list.isEmpty());\\n}"
+        },
+        {
+            "methodName": "testAddLastWithNonEmptyList",
+            "code": "@Test \\nvoid testAddLastWithNonEmptyList(){\\n DList list = new DList();\\n list.addFirst(\"value1\");\\n assertFalse(list.isEmpty());\\n list.addLast(\"value2\");\\n assertEquals(\"[value1, value2]\", list.toString());\\n}"
+        },
+        {
+            "methodName": "testRemoveLastWithEmptyList",
+            "code": "@Test \\nvoid testRemoveLastWithEmptyList(){\\n DList list = new DList();\\n assertThrows(ListEmptyException.class, () -> {list.removeLast();});\\n}"
+        },
+        {
+            "methodName": "testRemoveLastWithNonEmptyList",
+            "code": "@Test \\nvoid testRemoveLastWithNonEmptyList(){\\n DList list = new DList();\\n list.addFirst(\"value1\");\\n assertFalse(list.isEmpty());\\n Object value = list.removeLast();\\n assertEquals(\"value1\", value);\\n assertTrue(list.isEmpty());\\n}"
+        }
+    ]
+}
