@@ -1,0 +1,17 @@
+{
+    "className": "Traversal",
+    "testMethods": [
+        {
+            "methodName": "testPostorderTraversal",
+            "code": "@Test \\nvoid testPostorderTraversal(){\\n assertEquals(\"[1, 2, 3]\", traversal(new Node(1), Traversal.POSTORDER));\\n}"
+        },
+        {
+            "methodName": "testInorderTraversal",
+            "code": "@Test \\nvoid testInorderTraversal(){\\n assertEquals(\"[2, 1, 3]\", traversal(new Node(1), Traversal.INORDER));\\n}"
+        },
+        {
+            "methodName": "testPreorderTraversal",
+            "code": "@Test \\nvoid testPreorderTraversal(){\\n assertEquals(\"[1, 2, 3]\", traversal(new Node(1), Traversal.PREORDER));\\n}"
+        }
+    ]
+}

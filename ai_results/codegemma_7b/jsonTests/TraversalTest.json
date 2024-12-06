@@ -1,0 +1,45 @@
+{
+    "className": "Traversal",
+    "testMethods": [
+        {
+            "methodName": "testValueOfWithValidInput",
+            "code": "@Test\nvoid testValueOfWithValidInput() {\n assertEquals(Traversal.POSTORDER, Traversal.valueOf(\"POSTORDER\"));\n}"
+        },
+        {
+            "methodName": "testValueOfWithInvalidInput",
+            "code": "@Test\nvoid testValueOfWithInvalidInput() {\n assertThrows(IllegalArgumentException.class, () -> Traversal.valueOf(\"INVALID_VALUE\"));\n}"
+        },
+        {
+            "methodName": "testValueOfWithNullInput",
+            "code": "@Test\nvoid testValueOfWithNullInput() {\n assertThrows(IllegalArgumentException.class, () -> Traversal.valueOf(null));\n}"
+        },
+        {
+            "methodName": "testValueOfWithEmptyInput",
+            "code": "@Test\nvoid testValueOfWithEmptyInput() {\n assertThrows(IllegalArgumentException.class, () -> Traversal.valueOf(\" \"));\n}"
+        },
+        {
+            "methodName": "testValueOfWithWhitespaceInput",
+            "code": "@Test\nvoid testValueOfWithWhitespaceInput() {\n assertThrows(IllegalArgumentException.class, () -> Traversal.valueOf(\"  \"));\n}"
+        },
+        {
+            "methodName": "testValueOfWithUpperCaseInput",
+            "code": "@Test\nvoid testValueOfWithUpperCaseInput() {\n assertEquals(Traversal.POSTORDER, Traversal.valueOf(\"POSTORDER\".toUpperCase()));\n}"
+        },
+        {
+            "methodName": "testValueOfWithLowerCaseInput",
+            "code": "@Test\nvoid testValueOfWithLowerCaseInput() {\n assertEquals(Traversal.POSTORDER, Traversal.valueOf(\"postorder\".toLowerCase()));\n}"
+        },
+        {
+            "methodName": "testValueOfWithTitleCaseInput",
+            "code": "@Test\nvoid testValueOfWithTitleCaseInput() {\n assertEquals(Traversal.POSTORDER, Traversal.valueOf(\"Postorder\".toTitleCase()));\n}"
+        },
+        {
+            "methodName": "testValueOfWithMultipleWordsInput",
+            "code": "@Test\nvoid testValueOfWithMultipleWordsInput() {\n assertThrows(IllegalArgumentException.class, () -> Traversal.valueOf(\"POSTORDER INORDER\"));\n}"
+        },
+        {
+            "methodName": "testValueOfWithNonExistentInput",
+            "code": "@Test\nvoid testValueOfWithNonExistentInput() {\n assertThrows(IllegalArgumentException.class, () -> Traversal.valueOf(\"NON_EXISTENT_VALUE\"));\n}"
+        }
+    ]
+}

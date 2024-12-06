@@ -1,0 +1,29 @@
+{
+    "className": "List",
+    "testMethods": [
+        {
+            "methodName": "testIsEmptyWithEmptyList",
+            "code": "@Test \\nvoid testIsEmptyWithEmptyList() throws ListEmptyException {\\n  List list = new MyList();\\n assertTrue(list.isEmpty());\\n}"
+        },
+        {
+            "methodName": "testAddFirstAndGetFirst",
+            "code": "@Test \\nvoid testAddFirstAndGetFirst() throws ListEmptyException {\\n  List list = new MyList();\\n  list.addFirst(\"value1\");\\n assertEquals(\"value1\", list.getFirst());\\n}"
+        },
+        {
+            "methodName": "testAddLastAndGetLast",
+            "code": "@Test \\nvoid testAddLastAndGetLast() throws ListEmptyException {\\n  List list = new MyList();\\n  list.addLast(\"value2\");\\n assertEquals(\"value2\", list.getLast());\\n}"
+        },
+        {
+            "methodName": "testRemoveFirst",
+            "code": "@Test \\nvoid testRemoveFirst() throws ListEmptyException {\\n  List list = new MyList();\\n  list.addFirst(\"value3\");\\n assertEquals(\"value3\", list.removeFirst());\\n}"
+        },
+        {
+            "methodName": "testRemoveLast",
+            "code": "@Test \\nvoid testRemoveLast() throws ListEmptyException {\\n  List list = new MyList();\\n  list.addLast(\"value4\");\\n assertEquals(\"value4\", list.removeLast());\\n}"
+        },
+        {
+            "methodName": "testIsEmptyWithElementsInList",
+            "code": "@Test \\nvoid testIsEmptyWithElementsInList() throws ListEmptyException {\\n  List list = new MyList();\\n  list.addLast(\"value5\");\\n assertFalse(list.isEmpty());\\n}"
+        }
+    ]
+}

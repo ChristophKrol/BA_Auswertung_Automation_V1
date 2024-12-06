@@ -1,0 +1,54 @@
+{
+    "className": "MyList",
+    "testMethods": [
+        {
+            "methodName": "testIsEmptyWithEmptyList",
+            "code": "@Test\nvoid testIsEmptyWithEmptyList() {\n assertTrue(myList.isEmpty());\n}"
+        },
+        {
+            "methodName": "testIsEmptyWithNonEmptyList",
+            "code": "@Test\nvoid testIsEmptyWithNonEmptyList() {\n myList.addLast(1);\n assertFalse(myList.isEmpty());\n}"
+        },
+        {
+            "methodName": "testAddFirstWithEmptyList",
+            "code": "@Test\nvoid testAddFirstWithEmptyList() {\n myList.addFirst(1);\n assertEquals(1, myList.getFirst());\n}"
+        },
+        {
+            "methodName": "testAddFirstWithNonEmptyList",
+            "code": "@Test\nvoid testAddFirstWithNonEmptyList() {\n myList.addLast(1);\n myList.addFirst(2);\n assertEquals(2, myList.getFirst());\n}"
+        },
+        {
+            "methodName": "testRemoveFirstWithEmptyList",
+            "code": "@Test\nvoid testRemoveFirstWithEmptyList() {\n assertThrows(ListEmptyException.class, () -> myList.removeFirst());\n}"
+        },
+        {
+            "methodName": "testRemoveFirstWithNonEmptyList",
+            "code": "@Test\nvoid testRemoveFirstWithNonEmptyList() {\n myList.addLast(1);\n myList.addLast(2);\n assertEquals(1, myList.removeFirst());\n}"
+        },
+        {
+            "methodName": "testAddLastWithEmptyList",
+            "code": "@Test\nvoid testAddLastWithEmptyList() {\n myList.addLast(1);\n assertEquals(1, myList.getLast());\n}"
+        },
+        {
+            "methodName": "testAddLastWithNonEmptyList",
+            "code": "@Test\nvoid testAddLastWithNonEmptyList() {\n myList.addLast(1);\n myList.addLast(2);\n assertEquals(2, myList.getLast());\n}"
+        },
+        {
+            "methodName": "testRemoveLastWithEmptyList",
+            "code": "@Test\nvoid testRemoveLastWithEmptyList() {\n assertThrows(ListEmptyException.class, () -> myList.removeLast());\n}"
+        },
+        {
+            "methodName": "testRemoveLastWithNonEmptyList",
+            "code": "@Test\nvoid testRemoveLastWithNonEmptyList() {\n myList.addLast(1);\n myList.addLast(2);\n assertEquals(2, myList.removeLast());\n}"
+        },
+        {
+            "methodName": "testToStringWithEmptyList",
+            "code": "@Test\nvoid testToStringWithEmptyList() {\n assertEquals(\"[\" + \"HEAD\" + \"]\", myList.toString());\n}"
+        },
+        {
+            "methodName": "testToStringWithNonEmptyList",
+            "code": "@Test\nvoid testToStringWithNonEmptyList() {\n myList.addLast(1);\n myList.addLast(2);\n assertEquals(\"[\" + \"HEAD\" +\"",
+            "2": "]\", myList.toString());\n}"
+        }
+    ]
+}

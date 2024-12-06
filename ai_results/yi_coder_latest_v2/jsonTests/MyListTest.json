@@ -1,0 +1,33 @@
+{
+    "className": "MyList",
+    "testMethods": [
+        {
+            "methodName": "testAddFirstWithEmptyList",
+            "code": "@Test\nvoid testAddFirstWithEmptyList() {\n MyList list = new MyList();\n Object value = new Object(); \n list.addFirst(value);\n assertEquals(value, list.getFirst());\n}"
+        },
+        {
+            "methodName": "testAddFirstWithNonEmptyList",
+            "code": "@Test\nvoid testAddFirstWithNonEmptyList() {\n MyList list = new MyList(new Object());\n Object value = new Object(); \n list.addFirst(value);\n assertEquals(value, list.getFirst());\n}"
+        },
+        {
+            "methodName": "testGetFirstWithEmptyList",
+            "code": "@Test\nvoid testGetFirstWithEmptyList() {\n MyList list = new MyList();\n assertThrows(ListEmptyException.class, () -> list.getFirst());\n}"
+        },
+        {
+            "methodName": "testRemoveFirstWithEmptyList",
+            "code": "@Test\nvoid testRemoveFirstWithEmptyList() {\n MyList list = new MyList();\n assertThrows(ListEmptyException.class, () -> list.removeFirst());\n}"
+        },
+        {
+            "methodName": "testAddLastWithEmptyList",
+            "code": "@Test\nvoid testAddLastWithEmptyList() {\n MyList list = new MyList();\n Object value = new Object(); \n list.addLast(value);\n assertEquals(value, list.getLast());\n}"
+        },
+        {
+            "methodName": "testGetLastWithEmptyList",
+            "code": "@Test\nvoid testGetLastWithEmptyList() {\n MyList list = new MyList();\n assertThrows(ListEmptyException.class, () -> list.getLast());\n}"
+        },
+        {
+            "methodName": "testRemoveLastWithEmptyList",
+            "code": "@Test\nvoid testRemoveLastWithEmptyList() {\n MyList list = new MyList();\n assertThrows(ListEmptyException.class, () -> list.removeLast());\n}"
+        }
+    ]
+}

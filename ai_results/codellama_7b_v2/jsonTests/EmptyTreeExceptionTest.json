@@ -1,0 +1,13 @@
+{
+    "className": "EmptyTreeException",
+    "testMethods": [
+        {
+            "methodName": "testConstructorWithMessage",
+            "code": "@Test \\nvoid testConstructorWithMessage(){\\n assertEquals(\"Baum ist leer.\", new EmptyTreeException().getMessage());\\n}"
+        },
+        {
+            "methodName": "testConstructorWithoutMessage",
+            "code": "@Test \\nvoid testConstructorWithoutMessage(){\\n assertNull(new EmptyTreeException().getMessage());\\n}"
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+{
+    "className": "Xor",
+    "testMethods": [
+        {
+            "methodName": "testConvertToHexWithEmptyString",
+            "code": "@Test \\nvoid testConvertToHexWithEmptyString(){\\n assertEquals(\"\", Xor.convertToHex(\"\"));\\n}"
+        },
+        {
+            "methodName": "testConvertToHexWithOneCharacterString",
+            "code": "@Test \\nvoid testConvertToHexWithOneCharacterString(){\\n assertEquals(\"30\", Xor.convertToHex(\"0\"));\\n}"
+        },
+        {
+            "methodName": "testConvertToHexWithMultipleCharacterString",
+            "code": "@Test \\nvoid testConvertToHexWithMultipleCharacterString(){\\n assertEquals(\"30 31 32\", Xor.convertToHex(\"012\"));\\n}"
+        },
+        {
+            "methodName": "testConvertToHexArrayWithEmptyString",
+            "code": "@Test \\nvoid testConvertToHexArrayWithEmptyString(){\\n assertEquals(new ArrayList<String>(), Xor.convertToHexArray(\"\"));\\n}"
+        },
+        {
+            "methodName": "testConvertToHexArrayWithOneCharacterString",
+            "code": "@Test \\nvoid testConvertToHexArrayWithOneCharacterString(){\\n assertEquals(new ArrayList<String>(Arrays.asList(\"30\")), Xor.convertToHexArray(\"0\"));\\n}"
+        },
+        {
+            "methodName": "testConvertToHexArrayWithMultipleCharacterString",
+            "code": "@Test \\nvoid testConvertToHexArrayWithMultipleCharacterString(){\\n assertEquals(new ArrayList<String>(Arrays.asList(\"30 31 32\")), Xor.convertToHexArray(\"012\"));\\n}"
+        },
+        {
+            "methodName": "testXorEncryptWithEmptyMessageAndKey",
+            "code": "@Test \\nvoid testXorEncryptWithEmptyMessageAndKey(){\\n assertEquals(new ArrayList<String>(), Xor.xorEncrypt(\"\"), \"\"));\\n}"
+        },
+        {
+            "methodName": "testXorEncryptWithOneCharacterMessageAndEmptyKey",
+            "code": "@Test \\nvoid testXorEncryptWithOneCharacterMessageAndEmptyKey(){\\n assertEquals(new ArrayList<String>(Arrays.asList(\"30\")), Xor.xorEncrypt(\"0\", \"\"));\\n}"
+        },
+        {
+            "methodName": "testXorEncryptWithMultipleCharacterMessageAndEmptyKey",
+            "code": "@Test \\nvoid testXorEncryptWithMultipleCharacterMessageAndEmptyKey(){\\n assertEquals(new ArrayList<String>(Arrays.asList(\"30 31 32\")), Xor.xorEncrypt(\"012\", \"\"));\\n}"
+        },
+        {
+            "methodName": "testXorDecryptWithEmptyCipherAndKey",
+            "code": "@Test \\nvoid testXorDecryptWithEmptyCipherAndKey(){\\n assertEquals(\"\", Xor.xorDecrypt(new ArrayList<String>(), \"\"));\\n}"
+        },
+        {
+            "methodName": "testXorDecryptWithOneCharacterCipherAndEmptyKey",
+            "code": "@Test \\nvoid testXorDecryptWithOneCharacterCipherAndEmptyKey(){\\n assertEquals(\"0\", Xor.xorDecrypt(new ArrayList<String>(Arrays.asList(\"30\")), \"\"));\\n}"
+        },
+        {
+            "methodName": "testXorDecryptWithMultipleCharacterCipherAndEmptyKey",
+            "code": "@Test \\nvoid testXorDecryptWithMultipleCharacterCipherAndEmptyKey(){\\n assertEquals(\"012\", Xor.xorDecrypt(new ArrayList<String>(Arrays.asList(\"30 31 32\")), \"\"));\\n}"
+        },
+        {
+            "methodName": "testXorEncryptAndDecryptWithEmptyMessageAndKey",
+            "code": "@Test \\nvoid testXorEncryptAndDecryptWithEmptyMessageAndKey(){\\n assertEquals(\"\", Xor.xorDecrypt(Xor.xorEncrypt(\"\"), \"\"));\\n}"
+        },
+        {
+            "methodName": "testXorEncryptAndDecryptWithOneCharacterMessageAndEmptyKey",
+            "code": "@Test \\nvoid testXorEncryptAndDecryptWithOneCharacterMessageAndEmptyKey(){\\n assertEquals(\"0\", Xor.xorDecrypt(Xor.xorEncrypt(\"0\", \"\"), \"\"));\\n}"
+        },
+        {
+            "methodName": "testXorEncryptAndDecryptWithMultipleCharacterMessageAndEmptyKey",
+            "code": "@Test \\nvoid testXorEncryptAndDecryptWithMultipleCharacterMessageAndEmptyKey(){\\n assertEquals(\"012\", Xor.xorDecrypt(Xor.xorEncrypt(\"012\", \"\"), \"\"));\\n}"
+        },
+        {
+            "methodName": "testXorEncryptAndDecryptWithEmptyMessageAndOneCharacterKey",
+            "code": "@Test \\nvoid testXorEncryptAndDecryptWithEmptyMessageAndOneCharacterKey(){\\n assertEquals(\"\", Xor.xorDecrypt(Xor.xorEncrypt(\"\"), \"0\"));\\n}"
+        },
+        {
+            "methodName": "testXorEncryptAndDecryptWithOneCharacterMessageAndOneCharacterKey",
+            "code": "@Test \\nvoid testXorEncryptAndDecryptWithOneCharacterMessageAndOneCharacterKey(){\\n assertEquals(\"0\", Xor.xorDecrypt(Xor.xorEncrypt(\"0\", \"0\"), \"0\"));\\n}"
+        },
+        {
+            "methodName": "testXorEncryptAndDecryptWithMultipleCharacterMessageAndOneCharacterKey",
+            "code": "@Test \\nvoid testXorEncryptAndDecryptWithMultipleCharacterMessageAndOneCharacterKey(){\\n assertEquals(\"012\", Xor.xorDecrypt(Xor.xorEncrypt(\"012\", \"0\"), \"0\"));\\n}"
+        },
+        {
+            "methodName": "testXorEncryptAndDecryptWithEmptyMessageAndMultipleCharacterKey",
+            "code": "@Test \\nvoid testXorEncryptAndDecryptWithEmptyMessageAndMultipleCharacterKey(){\\n assertEquals(\"\", Xor.xorDecrypt(Xor.xorEncrypt(\"\"), \"012\"));\\n}"
+        },
+        {
+            "methodName": "testXorEncryptAndDecryptWithOneCharacterMessageAndMultipleCharacterKey",
+            "code": "@Test \\nvoid testXorEncryptAndDecryptWithOneCharacterMessageAndMultipleCharacterKey(){\\n assertEquals(\"0\", Xor.xorDecrypt(Xor.xorEncrypt(\"0\", \"012\"), \"012\"));\\n}"
+        },
+        {
+            "methodName": "testXorEncryptAndDecryptWithMultipleCharacterMessageAndMultipleCharacterKey",
+            "code": "@Test \\nvoid testXorEncryptAndDecryptWithMultipleCharacterMessageAndMultipleCharacterKey(){\\n assertEquals(\"012\", Xor.xorDecrypt(Xor.xorEncrypt(\"012\", \"012\"), \"012\"));\\n}"
+        }
+    ]
+}

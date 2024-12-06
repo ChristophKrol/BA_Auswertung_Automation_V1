@@ -1,0 +1,69 @@
+{
+    "className": "MyList",
+    "testMethods": [
+        {
+            "methodName": "testIsEmptyWithEmptyList",
+            "code": "@Test \\nvoid testIsEmptyWithEmptyList(){\\n assertTrue(new MyList().isEmpty());\\n}"
+        },
+        {
+            "methodName": "testIsEmptyWithNonEmptyList",
+            "code": "@Test \\nvoid testIsEmptyWithNonEmptyList(){\\n assertFalse(new MyList(new Node(\"HEAD\")).isEmpty());\\n}"
+        },
+        {
+            "methodName": "testGetFirstWithEmptyList",
+            "code": "@Test (expected = ListEmptyException.class) \\nvoid testGetFirstWithEmptyList(){\\n new MyList().getFirst();\\n}"
+        },
+        {
+            "methodName": "testGetFirstWithNonEmptyList",
+            "code": "@Test \\nvoid testGetFirstWithNonEmptyList(){\\n assertEquals(\"HEAD\", new MyList(new Node(\"HEAD\")).getFirst());\\n}"
+        },
+        {
+            "methodName": "testRemoveFirstWithEmptyList",
+            "code": "@Test (expected = ListEmptyException.class) \\nvoid testRemoveFirstWithEmptyList(){\\n new MyList().removeFirst();\\n}"
+        },
+        {
+            "methodName": "testRemoveFirstWithNonEmptyList",
+            "code": "@Test \\nvoid testRemoveFirstWithNonEmptyList(){\\n assertEquals(\"HEAD\", new MyList(new Node(\"HEAD\")).removeFirst());\\n}"
+        },
+        {
+            "methodName": "testAddFirstWithEmptyList",
+            "code": "@Test \\nvoid testAddFirstWithEmptyList(){\\n new MyList().addFirst(\"NEW_NODE\");\\n assertEquals(\"NEW_NODE\", new MyList().getFirst());\\n}"
+        },
+        {
+            "methodName": "testAddFirstWithNonEmptyList",
+            "code": "@Test \\nvoid testAddFirstWithNonEmptyList(){\\n Node node = new Node(\"HEAD\");\\n new MyList(node).addFirst(\"NEW_NODE\");\\n assertEquals(\"NEW_NODE\", new MyList(node).getFirst());\\n}"
+        },
+        {
+            "methodName": "testGetLastWithEmptyList",
+            "code": "@Test (expected = ListEmptyException.class) \\nvoid testGetLastWithEmptyList(){\\n new MyList().getLast();\\n}"
+        },
+        {
+            "methodName": "testGetLastWithNonEmptyList",
+            "code": "@Test \\nvoid testGetLastWithNonEmptyList(){\\n assertEquals(\"HEAD\", new MyList(new Node(\"HEAD\")).getLast());\\n}"
+        },
+        {
+            "methodName": "testRemoveLastWithEmptyList",
+            "code": "@Test (expected = ListEmptyException.class) \\nvoid testRemoveLastWithEmptyList(){\\n new MyList().removeLast();\\n}"
+        },
+        {
+            "methodName": "testRemoveLastWithNonEmptyList",
+            "code": "@Test \\nvoid testRemoveLastWithNonEmptyList(){\\n assertEquals(\"HEAD\", new MyList(new Node(\"HEAD\")).removeLast());\\n}"
+        },
+        {
+            "methodName": "testAddLastWithEmptyList",
+            "code": "@Test \\nvoid testAddLastWithEmptyList(){\\n new MyList().addLast(\"NEW_NODE\");\\n assertEquals(\"NEW_NODE\", new MyList().getFirst());\\n}"
+        },
+        {
+            "methodName": "testAddLastWithNonEmptyList",
+            "code": "@Test \\nvoid testAddLastWithNonEmptyList(){\\n Node node = new Node(\"HEAD\");\\n new MyList(node).addLast(\"NEW_NODE\");\\n assertEquals(\"NEW_NODE\", new MyList(node).getLast());\\n}"
+        },
+        {
+            "methodName": "testToStringWithEmptyList",
+            "code": "@Test \\nvoid testToStringWithEmptyList(){\\n assertEquals(\"[HEAD]\", new MyList().toString());\\n}"
+        },
+        {
+            "methodName": "testToStringWithNonEmptyList",
+            "code": "@Test \\nvoid testToStringWithNonEmptyList(){\\n Node node = new Node(\"HEAD\");\\n assertEquals(\"[HEAD]\", new MyList(node).toString());\\n}"
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "className": "MyQueue",
+    "testMethods": [
+        {
+            "methodName": "testIsEmptyWithEmptyQueue",
+            "code": "@Test\nvoid testIsEmptyWithEmptyQueue() {\n assertTrue(queue.isEmpty());\n}"
+        },
+        {
+            "methodName": "testEnterAndLeave",
+            "code": "@Test\nvoid testEnterAndLeave() {\n queue.enter(\"item1\");\n queue.enter(\"item2\");\n assertEquals(queue.leave(), \"item1\");\n assertEquals(queue.leave(), \"item2\");\n}"
+        },
+        {
+            "methodName": "testLeaveWithEmptyQueue",
+            "code": "@Test\nvoid testLeaveWithEmptyQueue() {\n try {\n queue.leave();\n assertTrue(false);\n } catch (ListEmptyException e) {\n assertTrue(true);\n }\n}"
+        },
+        {
+            "methodName": "testToString",
+            "code": "@Test\nvoid testToString() {\n queue.enter(\"item1\");\n queue.enter(\"item2\");\n assertEquals(queue.toString(), \"[\"item1\", \"item2\"]\");\n}"
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "className": "Queue",
+    "testMethods": [
+        {
+            "methodName": "testIsEmptyWithEmptyQueue",
+            "code": "@Test \\nvoid testIsEmptyWithEmptyQueue() throws Exception{\\n Queue queue = new QueueImpl(); assertTrue(queue.isEmpty());}"
+        },
+        {
+            "methodName": "testIsEmptyWithNonEmptyQueue",
+            "code": "@Test \\nvoid testIsEmptyWithNonEmptyQueue() throws Exception{\\n Queue queue = new QueueImpl(); queue.enter(new Object()); assertFalse(queue.isEmpty());}"
+        },
+        {
+            "methodName": "testEnterAndLeave",
+            "code": "@Test \\nvoid testEnterAndLeave() throws Exception{\\n Queue queue = new QueueImpl(); Object obj = new Object(); queue.enter(obj); assertEquals(obj, queue.leave());}"
+        },
+        {
+            "methodName": "testLeaveWithEmptyQueue",
+            "code": "@Test (expected=ListEmptyException.class) \\nvoid testLeaveWithEmptyQueue() throws Exception{\\n Queue queue = new QueueImpl(); queue.leave();}"
+        }
+    ]
+}

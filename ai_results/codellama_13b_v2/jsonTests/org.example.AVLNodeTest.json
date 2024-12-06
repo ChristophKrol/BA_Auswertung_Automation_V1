@@ -1,0 +1,41 @@
+{
+    "className": "org.example.AVLNode",
+    "testMethods": [
+        {
+            "methodName": "testGetLeft",
+            "code": "@Test\nvoid testGetLeft() {\n assertEquals(left, avlNode.getLeft());\n}"
+        },
+        {
+            "methodName": "testSetLeft",
+            "code": "@Test\nvoid testSetLeft() {\n AVLNode<T> newLeft = new AVLNode<>();\n avlNode.setLeft(newLeft);\n assertEquals(newLeft, avlNode.getLeft());\n}"
+        },
+        {
+            "methodName": "testGetRight",
+            "code": "@Test\nvoid testGetRight() {\n assertEquals(right, avlNode.getRight());\n}"
+        },
+        {
+            "methodName": "testSetRight",
+            "code": "@Test\nvoid testSetRight() {\n AVLNode<T> newRight = new AVLNode<>();\n avlNode.setRight(newRight);\n assertEquals(newRight, avlNode.getRight());\n}"
+        },
+        {
+            "methodName": "testGetBalance",
+            "code": "@Test\nvoid testGetBalance() {\n assertEquals(balance, avlNode.getBalance());\n}"
+        },
+        {
+            "methodName": "testSetBalance",
+            "code": "@Test\nvoid testSetBalance() {\n int newBalance = 1;\n avlNode.setBalance(newBalance);\n assertEquals(newBalance, avlNode.getBalance());\n}"
+        },
+        {
+            "methodName": "testGetHeight",
+            "code": "@Test\nvoid testGetHeight() {\n assertEquals(height, avlNode.getHeight());\n}"
+        },
+        {
+            "methodName": "testSetHeight",
+            "code": "@Test\nvoid testSetHeight() {\n int newHeight = 1;\n avlNode.setHeight(newHeight);\n assertEquals(newHeight, avlNode.getHeight());\n}"
+        },
+        {
+            "methodName": "testGetTotalNumberOfChildren",
+            "code": "@Test\nvoid testGetTotalNumberOfChildren() {\n int expected = 1;\n assertEquals(expected, avlNode.getTotalNumberOfChildren());\n}"
+        }
+    ]
+}

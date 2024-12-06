@@ -1,0 +1,21 @@
+{
+    "className": "Queue",
+    "testMethods": [
+        {
+            "methodName": "isEmpty_emptyQueue",
+            "code": "@Test\\nvoid isEmpty_emptyQueue(){\\nassertTrue(new Queue().isEmpty());\\n}"
+        },
+        {
+            "methodName": "isEmpty_nonEmptyQueue",
+            "code": "@Test\\nvoid isEmpty_nonEmptyQueue(){\\nQueue queue = new Queue();\\nqueue.enter(\"test\");\\nassertFalse(queue.isEmpty());\\n}"
+        },
+        {
+            "methodName": "leave_emptyQueue",
+            "code": "@Test(expected = ListEmptyException.class)\\nvoid leave_emptyQueue(){\\nnew Queue().leave();\\n}"
+        },
+        {
+            "methodName": "leave_nonEmptyQueue",
+            "code": "@Test\\nvoid leave_nonEmptyQueue(){\\nQueue queue = new Queue();\\nqueue.enter(\"test\");\\nassertEquals(\"test\", queue.leave());\\n}"
+        }
+    ]
+}

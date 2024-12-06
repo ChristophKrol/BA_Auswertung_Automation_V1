@@ -1,0 +1,17 @@
+{
+    "className": "Xor",
+    "testMethods": [
+        {
+            "methodName": "testConvertToHex",
+            "code": "@Test \\nvoid testConvertToHex() { \\n String value = \"Test\"; \\n assertEquals(\"54 65 73 74\", Xor.convertToHex(value)); \\n}"
+        },
+        {
+            "methodName": "testXorEncryptAndDecrypt",
+            "code": "@Test \\nvoid testXorEncryptAndDecrypt() { \\n String message = \"Geheimnachricht\"; \\n String key = \"secret\"; \\n List<String> encryptedMessage = Xor.xorEncrypt(message, key); \\n String decryptedMessage = Xor.xorDecrypt(encryptedMessage, key); \\n assertEquals(message, decryptedMessage); \\n}"
+        },
+        {
+            "methodName": "testCreateKey",
+            "code": "@Test \\nvoid testCreateKey() { \\n List<String> message = Arrays.asList(\"54\", \"65\", \"73\", \"74\"); \\n List<String> key = Arrays.asList(\"73\", \"63\", \"72\", \"81\", \"65\", \"74\"); \\n assertEquals(Arrays.asList(\"73\", \"63\", \"72\", \"81\", \"65\", \"73\", \"73\", \"63\", \"72\", \"81\", \"65\", \"73\"), Xor.createKey(message, key)); \\n}"
+        }
+    ]
+}

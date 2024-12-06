@@ -1,0 +1,17 @@
+{
+    "className": "MyStack",
+    "testMethods": [
+        {
+            "methodName": "testIsEmpty",
+            "code": "@Test \\nvoid testIsEmpty(){\\n assertTrue(myStack.isEmpty());\\n}"
+        },
+        {
+            "methodName": "testPush",
+            "code": "@Test \\nvoid testPush(){\\n myStack.push(1);\\n assertEquals(1, myStack.top.head.getValue());\\n}"
+        },
+        {
+            "methodName": "testPop",
+            "code": "@Test \\nvoid testPop() throws ListEmptyException {\\n myStack.push(1);\\n assertEquals(1, myStack.pop());\\n}"
+        }
+    ]
+}

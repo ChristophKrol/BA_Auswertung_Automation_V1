@@ -1,0 +1,41 @@
+{
+    "className": "Node",
+    "testMethods": [
+        {
+            "methodName": "testConstructorWithValueAndNext",
+            "code": "@Test \\nvoid testConstructorWithValueAndNext(){\\n Node node = new Node(1, null);\\n assertEquals(1, node.getValue());\\n assertNull(node.getNext());\\n}"
+        },
+        {
+            "methodName": "testConstructorWithValue",
+            "code": "@Test \\nvoid testConstructorWithValue(){\\n Node node = new Node(1);\\n assertEquals(1, node.getValue());\\n assertNull(node.getNext());\\n}"
+        },
+        {
+            "methodName": "testConstructorWithNoArgs",
+            "code": "@Test \\nvoid testConstructorWithNoArgs(){\\n Node node = new Node();\\n assertNull(node.getValue());\\n assertNull(node.getNext());\\n}"
+        },
+        {
+            "methodName": "testConstructorWithValueAndNextAndPrev",
+            "code": "@Test \\nvoid testConstructorWithValueAndNextAndPrev(){\\n Node node = new Node(1, null, null);\\n assertEquals(1, node.getValue());\\n assertNull(node.getNext());\\n assertNull(node.getPrev());\\n}"
+        },
+        {
+            "methodName": "testAddLast",
+            "code": "@Test \\nvoid testAddLast(){\\n Node node = new Node();\\n node.addLast(1);\\n assertEquals(1, node.getValue());\\n assertNull(node.getNext());\\n}"
+        },
+        {
+            "methodName": "testGetLastElement",
+            "code": "@Test \\nvoid testGetLastElement(){\\n Node node = new Node();\\n node.addLast(1);\\n assertEquals(1, node.getLastElement().getValue());\\n}"
+        },
+        {
+            "methodName": "testGetLast",
+            "code": "@Test \\nvoid testGetLast(){\\n Node node = new Node();\\n node.addLast(1);\\n assertEquals(1, node.getLast().getValue());\\n}"
+        },
+        {
+            "methodName": "testRemoveLast",
+            "code": "@Test \\nvoid testRemoveLast(){\\n Node node = new Node();\\n node.addLast(1);\\n assertEquals(1, node.removeLast().getValue());\\n}"
+        },
+        {
+            "methodName": "testToString",
+            "code": "@Test \\nvoid testToString(){\\n Node node = new Node();\\n node.addLast(1);\\n assertEquals(\"[1]\", node.toString());\\n}"
+        }
+    ]
+}

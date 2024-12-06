@@ -1,0 +1,9 @@
+{
+    "className": "EmptyTreeException",
+    "testMethods": [
+        {
+            "methodName": "testEmptyTreeExceptionMessage",
+            "code": "@Test \\nvoid testEmptyTreeExceptionMessage() throws Exception {\\n try {\n throw new EmptyTreeException();\\n } catch (EmptyTreeException e) {\n assertEquals(\"Baum ist leer.\", e.getMessage());\\n }\\n}"
+        }
+    ]
+}

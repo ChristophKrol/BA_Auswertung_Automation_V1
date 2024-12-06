@@ -1,0 +1,41 @@
+{
+    "className": "AVLNode",
+    "testMethods": [
+        {
+            "methodName": "testGetLeft",
+            "code": "@Test \\nvoid testGetLeft(){\\n AVLNode<Integer> node = new AVLNode<>(1);\\n assertNull(node.getLeft());\\n}"
+        },
+        {
+            "methodName": "testSetLeft",
+            "code": "@Test \\nvoid testSetLeft(){\\n AVLNode<Integer> node = new AVLNode<>(1);\\n AVLNode<Integer> left = new AVLNode<>(2);\\n node.setLeft(left);\\n assertEquals(left, node.getLeft());\\n}"
+        },
+        {
+            "methodName": "testGetRight",
+            "code": "@Test \\nvoid testGetRight(){\\n AVLNode<Integer> node = new AVLNode<>(1);\\n assertNull(node.getRight());\\n}"
+        },
+        {
+            "methodName": "testSetRight",
+            "code": "@Test \\nvoid testSetRight(){\\n AVLNode<Integer> node = new AVLNode<>(1);\\n AVLNode<Integer> right = new AVLNode<>(2);\\n node.setRight(right);\\n assertEquals(right, node.getRight());\\n}"
+        },
+        {
+            "methodName": "testGetBalance",
+            "code": "@Test \\nvoid testGetBalance(){\\n AVLNode<Integer> node = new AVLNode<>(1);\\n assertEquals(0, node.getBalance());\\n}"
+        },
+        {
+            "methodName": "testSetBalance",
+            "code": "@Test \\nvoid testSetBalance(){\\n AVLNode<Integer> node = new AVLNode<>(1);\\n node.setBalance(2);\\n assertEquals(2, node.getBalance());\\n}"
+        },
+        {
+            "methodName": "testGetHeight",
+            "code": "@Test \\nvoid testGetHeight(){\\n AVLNode<Integer> node = new AVLNode<>(1);\\n assertEquals(0, node.getHeight());\\n}"
+        },
+        {
+            "methodName": "testSetHeight",
+            "code": "@Test \\nvoid testSetHeight(){\\n AVLNode<Integer> node = new AVLNode<>(1);\\n node.setHeight(2);\\n assertEquals(2, node.getHeight());\\n}"
+        },
+        {
+            "methodName": "testGetTotalNumberOfChildren",
+            "code": "@Test \\nvoid testGetTotalNumberOfChildren(){\\n AVLNode<Integer> node = new AVLNode<>(1);\\n assertEquals(1, node.getTotalNumberOfChildren());\\n}"
+        }
+    ]
+}
